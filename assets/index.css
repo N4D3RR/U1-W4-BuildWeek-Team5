@@ -139,3 +139,18 @@ header img {
 .titleh {
   font: bold;
 }
+.center,
+#buttonL {
+  text-align: center;
+}
+#correct,
+#ring,
+#wrong {
+  display: inline-block;
+}
+#wrong {
+  text-align: right;
+}
+#Lmain {
+  text-align: center;
+}
