@@ -79,3 +79,24 @@ header img {
   width: 500px;
   height: 500px;
 }
+#commenthere {
+  width: 50%;
+  margin: 2em;
+  background-color: transparent;
+  border-bottom: solid 1.5px;
+  border-bottom-color: #881b80;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.center {
+  text-align: center;
+}
+.strs {
+  display: inline-block;
+  size: 15px;
+  padding: 1em;
+}
+.titleh {
+  font: bold;
+}
