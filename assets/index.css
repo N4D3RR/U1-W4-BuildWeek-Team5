@@ -1,12 +1,12 @@
 /* --------------------------- IMPOSTAZIONI GENERALI */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 body {
   background-image: url(img/bg.jpg);
   background-position: top;
   background-size: cover;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -73,4 +73,19 @@ header img {
   box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
   font-size: 20px;
   font-weight: 700;
+}
+.center,
+#buttonL {
+  text-align: center;
+}
+#correct,
+#ring,
+#wrong {
+  display: inline-block;
+}
+#wrong {
+  text-align: right;
+}
+#Lmain {
+  text-align: center;
 }
