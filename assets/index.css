@@ -89,3 +89,18 @@ header img {
 #Lmain {
   text-align: center;
 }
+.center,
+#buttonL {
+  text-align: center;
+}
+#correct,
+#ring,
+#wrong {
+  display: inline-block;
+}
+#wrong {
+  text-align: right;
+}
+#Lmain {
+  text-align: center;
+}
