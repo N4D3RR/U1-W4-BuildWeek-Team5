@@ -79,3 +79,44 @@ header img {
   width: 500px;
   height: 500px;
 }
+
+.grassetto {
+  font-weight: bold;
+}
+
+#welcome {
+  font-size: 50px;
+}
+
+#istruzioni {
+  color: #d20094;
+  font-size: 30px;
+}
+
+#bottone_welcome {
+  margin-left: 75%;
+  width: 50px;
+  height: 50px;
+}
+
+.fluo_coso {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.allineato {
+  display: inline-block;
+}
+
+#palle {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#palle2 {
+  padding-right: 20%;
+}
+
+#tasto {
+}
