@@ -4,6 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
+    <style>
+      img {
+        width: 120px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <!-- logo e timer -->
+    <header class="">
+      <img class="" src="/assets/img/epicode_logo.png" alt="logo epicode" />
+
+      <section class="timer">
+        <div class="progress-circle"></div>
+        <span>seconds</span>
+        <p>30</p>
+        <span>remaining</span>
+      </section>
+    </header>
+
+    <main>
+      <!-- domanda e risposte -->
+      <h1>Domanda</h1>
+      <ul class="">
+        <li><button class="correct-answer-btn"></button></li>
+        <li><button class="asnwer-btn"></button></li>
+        <li><button class="asnwer-btn"></button></li>
+        <li><button class="asnwer-btn"></button></li>
+      </ul>
+    </main>
+    <!-- counter domande -->
+    <footer>
+      <p id="counter-progress">
+        QUESTION <span id="counter">1</span>
+        <span id="total-counter">/10</span>
+      </p>
+    </footer>
+  </body>
 </html>

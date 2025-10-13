@@ -1,0 +1,60 @@
+/* --------------------------- IMPOSTAZIONI GENERALI */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+  background-image: url(img/bg.jpg);
+  background-position: top;
+  background-size: cover;
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.spazio-bottoni {
+  margin: 50px;
+}
+
+#contenitore-generale {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header img {
+  max-width: 200px;
+  margin: 50px 0;
+}
+
+.bottone-fluorescente {
+  width: 250px;
+  height: 70px;
+  color: black;
+  background-color: #00ffff;
+  border: none;
+  box-shadow: 0px 0px 35px 15px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bottone-risposte {
+  width: 360px;
+  height: 75px;
+  color: white;
+  background-color: #ffffff1d;
+  border: 3px solid white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.rate-us {
+  width: 230px;
+  height: 70px;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+}
