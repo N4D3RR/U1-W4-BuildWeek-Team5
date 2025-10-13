@@ -41,7 +41,20 @@ header img {
   width: 360px;
   height: 75px;
   color: white;
-  background-color: #ffffff1d;
+  background-color: rgba(255, 255, 255, 0.178);
+  border: 3px solid white;
+  /* border: 2px solid transparent;
+  border-image: linear-gradient(to top left, transparent, white) 1; */
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.risposta-selezionata {
+  width: 360px;
+  height: 75px;
+  color: white;
+  background-color: #d20094;
   border: 3px solid white;
   border-radius: 50px;
   font-size: 20px;
