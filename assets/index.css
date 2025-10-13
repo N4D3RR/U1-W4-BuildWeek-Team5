@@ -74,18 +74,3 @@ header img {
   font-size: 20px;
   font-weight: 700;
 }
-.center,
-#buttonL {
-  text-align: center;
-}
-#correct,
-#ring,
-#wrong {
-  display: inline-block;
-}
-#wrong {
-  text-align: right;
-}
-#Lmain {
-  text-align: center;
-}
