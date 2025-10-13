@@ -3,24 +3,28 @@ const ctx = document.getElementById('myChart')
 const myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ['Rosso', 'Verde'],
+    labels: ['Corrette', 'Sbagliate'],
     datasets: [
       {
-        label: 'Dataset 1',
-        data: [30, 70],
-        backgroundColor: ['rgb(0,255,0)', 'rgb(255,0,0)'],
-        hoverOffset: 10,
+        label: 'Percentuale',
+        data: [70, 30],
+        backgroundColor: ['rgb(0,255,255)', '#D20094'],
+        borderColor: 'rgb(0,0,0,0)',
       },
     ],
   },
   options: {
+    cutout: '75%',
     responsive: true,
     plugins: {
       legend: {
-        position: 'right',
+        labels: {
+          position: 'right',
+          padding: 30,
+        },
       },
       title: {
-        display: true,
+        display: false,
         text: 'Il mio grafico',
       },
     },
