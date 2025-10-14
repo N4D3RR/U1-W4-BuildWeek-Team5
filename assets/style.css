@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 body {
-  background-image: url(./assets/img/bg.png);
+  background-image: url(img/bg.png);
   background-position: top;
   background-size: cover;
   font-family: 'Outfit', sans-serif;
@@ -10,53 +10,6 @@ body {
   font-style: normal;
   color: white;
 }
-
-main {
-  width: 1024px;
-  height: 768px;
-  position: relative;
-  margin: 0 auto;
-}
-
-/* --------------- WELCOME */
-
-#welcome {
-  position: absolute;
-  font-weight: 400;
-  font-size: 100px;
-  margin: 100px 0;
-}
-
-#termini {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-#bottone-welcome {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-#instructions {
-  position: absolute;
-  top: 40%;
-  left: 0;
-}
-
-li {
-  margin: 10px;
-  font-size: 1.3em;
-}
-
-#promise {
-  padding: 27px 0;
-}
-
-/* --------------- QUIZ */
-
-/* ------------------------------ DOCUMENTO */
 
 .spazio-bottoni {
   margin: 50px;
@@ -88,8 +41,9 @@ header img {
 
 .bottone-risposte {
   width: 360px;
-  height: 75px;
+  height: 80px;
   color: white;
+  margin: 10px 25px;
   background-color: rgba(255, 255, 255, 0.178);
   border: 3px solid white;
   /* border: 2px solid transparent;
@@ -125,6 +79,48 @@ header img {
   font-weight: bold;
 }
 
+/* ----------------------------------- WELCOME */
+#main-welcome {
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#welcome {
+  position: absolute;
+  font-weight: 400;
+  font-size: 100px;
+  margin: 100px 0;
+}
+
+#termini {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#bottone-welcome {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#instructions {
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+
+li {
+  margin: 10px;
+  font-size: 1.3em;
+}
+
+#promise {
+  padding: 27px 0;
+}
+
 #istruzioni {
   color: #d20094;
   font-size: 40px;
@@ -145,45 +141,61 @@ header img {
   height: 50px;
 }
 
-.center,
-#buttonL {
+/* --------------------------------------------- QUIZ */
+
+#contenitore-generale-quiz {
+  width: 1024px;
+  padding: 0 100px;
+  margin: auto;
+  margin-top: 7.5%;
+}
+
+#main-quiz {
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
   text-align: center;
 }
 
-#grafico {
-  width: 300px;
-  height: 300px;
-  /* Stashed changes*/
+#header-quiz {
+  position: relative;
 }
 
-#ring {
+.logo-quiz {
   display: inline-block;
-  text-align: center;
-}
-#wrong {
   position: absolute;
-  text-align: right;
-  top: 50%;
+  top: 0;
+  left: 0;
+  margin: 0;
 }
-#correct {
+
+.domanda {
+  margin: 0 auto;
+  padding-top: 160px;
+  font-size: 55px;
+}
+
+#tempo {
+  display: inline-block;
   position: absolute;
-  top: 50%;
-  text-align: left;
-  right: 15%;
+  top: 0;
+  right: 0;
 }
-#Lmain {
-  text-align: center;
+
+#counter-progress {
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: 500;
 }
-.center,
-#buttonL {
-  text-align: center;
+
+#total-counter {
+  color: #d20094;
 }
+
 .timer {
-  position: absolute;
-  top: 50px;
-  right: 50px;
   width: 130px;
   height: 130px;
+  position: relative;
 }
 
 #progress-circle {
@@ -191,7 +203,7 @@ header img {
   height: 130px;
   border-radius: 50%;
   background: transparent;
-  position: relative;
+  position: absolute;
   background: conic-gradient(#00bcd4 0deg, #00bcd4 360deg, transparent 360deg);
   /* per nascondere l'interno del cerchio e lasciare solo il bordo visibile
   -webkit è per safari; mask per tutti gli altri browser */
@@ -208,12 +220,14 @@ header img {
 }
 
 .timer-text {
+  width: 130px;
+  height: 130px;
+  padding: 12px 0;
   color: white;
   text-align: center;
   font-size: 14px;
-  line-height: 1.4;
-  max-width: 80%;
 }
+
 .timer-text span {
   font-size: 3rem;
   font-weight: 700;
@@ -225,9 +239,107 @@ header img {
   color: white;
   font-weight: 400;
 }
-/* fine CSS timer */
 
-/* Grafico a ciambella*/
+/* ------------------------------ FEEDBACK */
+#main-feedback {
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#commenthere {
+  outline-width: 0;
+
+  color: white;
+  width: 80%;
+  margin: 2em;
+  padding-bottom: 6px;
+  background-color: transparent;
+  border-bottom: solid 3px;
+  border-bottom-color: #881b80;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-size: 18px;
+}
+
+#stars-container {
+  margin-bottom: 100px;
+}
+
+.strs {
+  display: inline-block;
+  size: 20px;
+  margin: 5px;
+  width: 50px;
+  height: auto;
+}
+.titleh {
+  font-size: 3em;
+  font: bold;
+  padding-top: 90px;
+}
+.feedback {
+  font-size: 1.8em;
+}
+
+#more-info-container {
+  margin-top: 35px;
+}
+
+/* ---------------------------------------------- RESULTS */
+
+#main-results {
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+  position: relative;
+}
+
+#results {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+#summary {
+  font-weight: 300;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+#wrong {
+  position: absolute;
+  top: 42%;
+  text-align: right;
+  right: 0;
+}
+
+#correct {
+  position: absolute;
+  text-align: left;
+  top: 42%;
+}
+
+.titolo-results {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+}
+
+.percentuale {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.n-domande {
+  font-size: 20px;
+  margin-top: 6px;
+}
 
 #grafico {
   display: inline-block;
@@ -235,16 +347,13 @@ header img {
   width: 300px;
   height: 300px;
   margin: 0 auto;
-}
-
-#grafico canvas {
-  width: 100%;
-  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .chart-center-text {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
