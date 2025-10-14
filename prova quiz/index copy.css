@@ -1,0 +1,193 @@
+/* --------------------------- IMPOSTAZIONI GENERALI */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+  background-image: url(img/bg.jpg);
+  background-position: top;
+  background-size: cover;
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+/* ------------------------------ DOCUMENTO */
+
+.spazio-bottoni {
+  margin: 50px;
+}
+
+#contenitore-generale {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header img {
+  max-width: 200px;
+  margin: 50px 0;
+}
+
+.bottone-fluorescente {
+  width: 250px;
+  height: 70px;
+  color: black;
+  background-color: #00ffff;
+  border: none;
+  box-shadow: 0px 0px 35px 15px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bottone-risposte {
+  width: 360px;
+  height: 75px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.178);
+  border: 3px solid white;
+  /* border: 2px solid transparent;
+  border-image: linear-gradient(to top left, transparent, white) 1; */
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.risposta-selezionata {
+  width: 360px;
+  height: 75px;
+  color: white;
+  background-color: #d20094;
+  border: 3px solid white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.rate-us {
+  width: 230px;
+  height: 70px;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5%;
+}
+.center,
+#buttonL {
+  text-align: center;
+}
+
+#grafico {
+  width: 300px;
+  height: 300px;
+  /* Stashed changes*/
+}
+
+#ring {
+  display: inline-block;
+  text-align: center;
+}
+#wrong {
+  position: absolute;
+  text-align: right;
+  top: 50%;
+}
+#correct {
+  position: absolute;
+  top: 50%;
+  text-align: left;
+  right: 15%;
+}
+#Lmain {
+  text-align: center;
+}
+.center,
+#buttonL {
+  text-align: center;
+}
+.timer {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 130px;
+  height: 130px;
+}
+
+#progress-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  background: conic-gradient(#00bcd4 0deg, #00bcd4 360deg, transparent 360deg);
+  /* per nascondere l'interno del cerchio e lasciare solo il bordo visibile
+  -webkit è per safari; mask per tutti gli altri browser */
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 8px),
+    white calc(100% - 8px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 8px),
+    white calc(100% - 8px)
+  );
+}
+
+.timer-text {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 80%;
+}
+.timer-text span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.timer-text small {
+  font-size: 0.5rem;
+  color: white;
+  font-weight: 400;
+}
+/* fine CSS timer */
+
+/* Grafico a ciambella*/
+
+#grafico {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#grafico canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.chart-center-text strong {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ffff;
+}
