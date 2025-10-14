@@ -56,6 +56,10 @@ window.addEventListener("DOMContentLoaded", function () {
         legend: { display: false },
         tooltip: { enabled: true },
       },
+      title: {
+        display: true,
+        text: "Il mio grafico",
+      },
     },
   })
 })

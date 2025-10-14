@@ -119,6 +119,9 @@ header img {
 }
 
 #commenthere {
+  outline-width: 0;
+
+  color: white;
   width: 50%;
   margin: 2em;
   background-color: transparent;
@@ -135,6 +138,8 @@ header img {
   display: inline-block;
   size: 15px;
   padding: 1em;
+  width: 20px;
+  height: 20px;
 }
 .titleh {
   font: bold;
