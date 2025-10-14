@@ -6,25 +6,29 @@
     <title>Results</title>
     <link rel="stylesheet" href="assets/reset.css" />
     <link rel="stylesheet" href="assets/basestyle.css" />
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/index.css" />
   </head>
   <body>
     <div id="contenitore-generale">
       <header>
         <img src="assets/img/epicode_logo.png" alt="epicode_logo" />
+        <h1 class="center" id="Results">Results</h1>
+        <h3 class="center" id="summary">The summary of your answers:</h3>
       </header>
-      <main id="main-results">
-        <h1 id="results">Results</h1>
-        <h3 id="summary">The summary of your answers:</h3>
-        <div id="correct"></div>
-        <div id="grafico">
-          <canvas id="myChart"></canvas>
+      <main id="Lmain">
+        <div id="correct"><h1>Correct:</h1></div>
+        <div class="center" id="ring">
+          <div id="grafico">
+            <canvas id="myChart"></canvas>
+          </div>
         </div>
-        <div id="wrong"></div>
-        <div id="buttonL">
+        <div id="wrong"><h1>Wrong:</h1></div>
+      </main>
+      <footer>
+        <div class="center" id="buttonL">
           <button class="rate-us" id="button">RATE US</button>
         </div>
-      </main>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="prova-java.js"></script>
