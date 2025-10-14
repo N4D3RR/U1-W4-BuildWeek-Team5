@@ -11,34 +11,40 @@
   <body>
     <!-- logo e timer -->
     <div id="contenitore-generale">
-      <header class="">
+      <header id="header">
         <img class="" src="/assets/img/epicode_logo.png" alt="logo epicode" />
-
+        <!-- timer -->
         <section class="timer">
-          <div class="progress-circle"></div>
-          <span>seconds</span>
-          <p>30</p>
-          <span>remaining</span>
+          <div id="progress-circle"></div>
+          <p class="timer-text">
+            <small
+              >SECONDS<br /><span id="seconds">30</span><br />REMAINING</small
+            >
+          </p>
         </section>
       </header>
 
-      <main>
+      <main id="quiz">
         <!-- domanda e risposte -->
-        <h1>Domanda</h1>
-        <ul class="">
-          <li><button class="correct-answer-btn"></button></li>
-          <li><button class="asnwer-btn"></button></li>
-          <li><button class="asnwer-btn"></button></li>
-          <li><button class="asnwer-btn"></button></li>
-        </ul>
+        <h2>
+          How can i create a <br />
+          <strong>checkbox in HTML?</strong>
+        </h2>
+        <div id="answers">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
       </main>
       <!-- counter domande -->
-      <footer>
+      <footer id="quiz-footer">
         <p id="counter-progress">
           QUESTION <span id="counter">1</span>
           <span id="total-counter">/10</span>
         </p>
       </footer>
     </div>
+    <script src="/scripts/timer.js"></script>
   </body>
 </html>
