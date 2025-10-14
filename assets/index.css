@@ -240,3 +240,36 @@ header img {
 #Lmain {
   text-align: center;
 }
+#commenthere {
+  outline-width: 0;
+
+  color: white;
+  width: 50%;
+  margin: 2em;
+  background-color: transparent;
+  border-bottom: solid 1.5px;
+  border-bottom-color: #881b80;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.center {
+  text-align: center;
+}
+.strs {
+  display: inline-block;
+  size: 15px;
+  padding: 1em;
+  width: 60px;
+  height: auto;
+}
+.titleh {
+  font-size: 3em;
+  font: bold;
+}
+.titlep {
+  font-size: 2.5em;
+}
+.feedback {
+  font-size: 2.5em;
+}
