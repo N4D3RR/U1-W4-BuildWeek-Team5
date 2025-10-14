@@ -1,31 +1,31 @@
-const ctx = document.getElementById('myChart')
+const ctx = document.getElementById("myChart")
 
 const myChart = new Chart(ctx, {
-  type: 'doughnut',
+  type: "doughnut",
   data: {
-    labels: ['Corrette', 'Sbagliate'],
+    labels: ["Corrette", "Sbagliate"],
     datasets: [
       {
-        label: 'Percentuale',
+        label: "Percentuale",
         data: [70, 30],
-        backgroundColor: ['rgb(0,255,255)', '#D20094'],
-        borderColor: 'rgb(0,0,0,0)',
+        backgroundColor: ["rgb(0,255,255)", "#D20094"],
+        borderColor: "rgb(0,0,0,0)",
       },
     ],
   },
   options: {
-    cutout: '75%',
+    cutout: "75%",
     responsive: true,
     plugins: {
       legend: {
         labels: {
-          position: 'right',
+          position: "right",
           padding: 30,
         },
       },
       title: {
         display: false,
-        text: 'Il mio grafico',
+        text: "Il mio grafico",
       },
     },
   },
