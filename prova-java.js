@@ -1,18 +1,14 @@
-<<<<<<< HEAD
 window.addEventListener("DOMContentLoaded"),
   function () {
     // DATI DEL QUIZ
-=======
 window.addEventListener("DOMContentLoaded", function () {
   // DATI DEL QUIZ
   const totalQuestions = 6
   const correctAnswers = 4
   const wrongAnswers = totalQuestions - correctAnswers
->>>>>>> parent of 09e41bf (CSSS DEFINITIVO)
 
     // CALCOLO PERCENTUALI
 
-<<<<<<< HEAD
     // TESTO SUI BLOCCHI LATERALI
     document.getElementById("correct").innerHTML = `
     <p class="titolo-results">Correct<p>
@@ -30,7 +26,6 @@ window.addEventListener("DOMContentLoaded", function () {
     const chartContainer = document.getElementById("grafico");
     const centerText = document.createElement("div");
     centerText.classList.add("chart-center-text");
-=======
   // TESTO SUI BLOCCHI LATERALI
   document.getElementById("correct").innerHTML = `
     <h1>Correct:</h1>
@@ -48,7 +43,6 @@ window.addEventListener("DOMContentLoaded", function () {
   const chartContainer = document.getElementById("grafico")
   const centerText = document.createElement("div")
   centerText.classList.add("chart-center-text")
->>>>>>> parent of 09e41bf (CSSS DEFINITIVO)
 
     centerText.innerHTML = `
     <strong>Congratulations!</strong>
@@ -58,7 +52,6 @@ window.addEventListener("DOMContentLoaded", function () {
     // GRAFICO
     const ctx = document.getElementById("myChart");
 
-<<<<<<< HEAD
     new Chart(ctx),
       {
         type: "doughnut",
@@ -86,7 +79,6 @@ window.addEventListener("DOMContentLoaded", function () {
         },
       };
   };
-=======
   // GRAFICO
   const ctx = document.getElementById("myChart")
 
@@ -116,4 +108,3 @@ window.addEventListener("DOMContentLoaded", function () {
     },
   })
 })
->>>>>>> parent of 09e41bf (CSSS DEFINITIVO)
