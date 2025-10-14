@@ -1,12 +1,12 @@
 /* --------------------------- IMPOSTAZIONI GENERALI */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 body {
   background-image: url(img/bg.jpg);
   background-position: top;
   background-size: cover;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -78,12 +78,12 @@ header img {
 .center,
 #buttonL {
   text-align: center;
-=======
+}
 
 #grafico {
   width: 300px;
   height: 300px;
->>>>>>> Stashed changes
+  /* Stashed changes*/
 }
 
 #ring {
@@ -108,7 +108,7 @@ header img {
 #buttonL {
   text-align: center;
 }
-#correct,
+/*#correct,
 #ring,
 #wrong {
   display: inline-block;
