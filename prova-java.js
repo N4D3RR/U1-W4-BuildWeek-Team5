@@ -24,7 +24,7 @@ const myChart = new Chart(ctx, {
         },
       },
       title: {
-        display: false,
+        display: true,
         text: 'Il mio grafico',
       },
     },
