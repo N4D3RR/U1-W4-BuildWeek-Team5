@@ -1,18 +1,55 @@
-/* --------------------------- IMPOSTAZIONI GENERALI */
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 body {
-  background-image: url(img/bg.jpg);
+  background-image: url(./assets/img/bg.jpg);
   background-position: top;
   background-size: cover;
   font-family: 'Outfit', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   color: white;
 }
 
+main {
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#welcome {
+  position: absolute;
+  font-weight: 400;
+  font-size: 100px;
+  margin: 100px 0;
+}
+
+#termini {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#bottone-welcome {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#instructions {
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+
+li {
+  margin: 10px;
+}
+
+#promise {
+  padding: 27px 0;
+}
 /* ------------------------------ DOCUMENTO */
 
 .spazio-bottoni {
@@ -21,12 +58,19 @@ body {
 
 #contenitore-generale {
   width: 80%;
+  height: 90vh;
+  margin: 0 auto;
+}
+
+header {
+  width: 1024px;
   margin: 0 auto;
 }
 
 header img {
   max-width: 200px;
   margin: 50px 0;
+  margin-bottom: 0;
 }
 
 .bottone-fluorescente {
@@ -75,24 +119,30 @@ header img {
   font-weight: 700;
 }
 
-#grafico {
+/* #grafico {
   width: 500px;
   height: 500px;
-}
+} */
 
 .grassetto {
   font-weight: bold;
 }
 
-#welcome {
-  font-size: 50px;
-}
-
 #istruzioni {
   color: #d20094;
-  font-size: 30px;
+  font-size: 40px;
+  margin-bottom: 0;
 }
 
+#instructions p {
+  margin: 20px 0;
+}
+
+#palle p {
+  margin: 0;
+}
+
+/*
 #bottone_welcome {
   width: 50px;
   height: 50px;
@@ -102,20 +152,6 @@ header img {
   text-decoration: none;
   font-weight: bold;
   color: black;
-}
-
-.allineato {
-  display: inline-block;
-  margin-left: auto;
-}
-
-#palle {
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-#palle2 {
-  padding-right: 20%;
 }
 
 #commenthere {
@@ -240,3 +276,4 @@ header img {
 #Lmain {
   text-align: center;
 }
+ */
