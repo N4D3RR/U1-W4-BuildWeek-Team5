@@ -21,13 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function highlightStars(index) {
     for (let i = 0; i <= index; i++) {
-      stars[i].src = "./assets/img/star-filled.svg";
+      stars[i].src = "./assets/img/star.svg";
     }
   }
 
   function resetStars() {
     stars.forEach((star) => {
-      star.src = "./assets/img/star.svg";
+      star.src = "./assets/img/star-filled.svg";
     });
   }
 });
