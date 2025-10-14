@@ -108,25 +108,6 @@ header img {
 #buttonL {
   text-align: center;
 }
-/*#correct,
-#ring,
-#wrong {
-  display: inline-block;
-}
-
-#ring {
-  display: inline-block;
-  text-align: center;
-}
-#wrong {
-  position: absolute;
-  text-align: right;
-}
-#Lmain {
-  text-align: center;
-}
-
-/* CSS timer */
 .timer {
   position: absolute;
   top: 50px;
