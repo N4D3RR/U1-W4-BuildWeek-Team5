@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="assets/basestyle.css" />
+    <link rel="stylesheet" href="/prova quiz/index copy.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <!-- logo e timer -->
+    <div id="contenitore-generale">
+      <header id="header">
+        <img class="" src="/assets/img/epicode_logo.png" alt="logo epicode" />
+        <!-- timer -->
+        <section class="timer">
+          <div id="progress-circle"></div>
+          <p class="timer-text">
+            <small
+              >SECONDS<br /><span id="seconds">30</span><br />REMAINING</small
+            >
+          </p>
+        </section>
+      </header>
+
+      <main id="quiz">
+        <!-- domanda e risposte -->
+        <h2>
+          Which programming language shares its <br />
+          <strong>name with an island in Indonesia?</strong>
+        </h2>
+        <div id="answers">
+          <button>Python</button>
+          <button class="true">Java</button>
+          <button>C</button>
+          <button>Jakarta</button>
+        </div>
+      </main>
+      <!-- counter domande -->
+      <footer id="quiz-footer">
+        <p id="counter-progress">
+          QUESTION <span id="counter">10</span>
+          <span id="total-counter">/10</span>
+        </p>
+      </footer>
+    </div>
+    <script src="/prova quiz/timer copy.js"></script>
+    <script>
+      setTimeout(() => {
+        window.location.href = "/prova quiz/results.html"
+      }, 5 * 1000)
+    </script>
+  </body>
+</html>
