@@ -150,13 +150,14 @@ header img {
 }
 
 .timer-text span {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: white;
+  line-height: 1em;
 }
 
 .timer-text small {
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   color: white;
   font-weight: 400;
 }
