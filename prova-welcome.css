@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+body {
+  background-image: url(./assets/img/bg.png);
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+}
+
+main {
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#welcome {
+  position: absolute;
+  font-weight: 400;
+  font-size: 100px;
+  margin: 100px 0;
+}
+
+#termini {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#bottone-welcome {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#instructions {
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+
+li {
+  margin: 10px;
+}
+
+#promise {
+  padding: 27px 0;
+}
+/* ------------------------------ DOCUMENTO */
+
+.spazio-bottoni {
+  margin: 50px;
+}
+
+#contenitore-generale {
+  width: 1024px;
+  height: 768px;
+  padding: 0 100px;
+  margin: 0 auto;
+}
+
+header {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+header img {
+  max-width: 200px;
+  margin: 50px 0;
+  margin-bottom: 0;
+}
+
+.bottone-fluorescente {
+  width: 250px;
+  height: 70px;
+  color: black;
+  background-color: #00ffff;
+  border: none;
+  box-shadow: 0px 0px 35px 15px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bottone-risposte {
+  width: 360px;
+  height: 75px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.178);
+  border: 3px solid white;
+  /* border: 2px solid transparent;
+  border-image: linear-gradient(to top left, transparent, white) 1; */
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.risposta-selezionata {
+  width: 360px;
+  height: 75px;
+  color: white;
+  background-color: #d20094;
+  border: 3px solid white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.rate-us {
+  width: 230px;
+  height: 70px;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* #grafico {
+  width: 500px;
+  height: 500px;
+} */
+
+.grassetto {
+  font-weight: bold;
+}
+
+#istruzioni {
+  color: #d20094;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+#instructions p {
+  margin: 20px 0;
+}
+
+#palle p {
+  margin: 0;
+}
+
+/*
+#bottone_welcome {
+  width: 50px;
+  height: 50px;
+}
+
+.fluo_coso {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+#commenthere {
+  outline-width: 0;
+
+  color: white;
+  width: 50%;
+  margin: 2em;
+  background-color: transparent;
+  border-bottom: solid 1.5px;
+  border-bottom-color: #881b80;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.center {
+  text-align: center;
+}
+.strs {
+  display: inline-block;
+  size: 15px;
+  padding: 1em;
+  width: 20px;
+  height: 20px;
+}
+.titleh {
+  font: bold;
+}
+#header {
+  position: relative;
+  margin-top: 40px;
+  height: 150px;
+}
+
+.timer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+
+#progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#00bbff 0deg, #ffffff 360deg);
+  position: relative;
+  margin: 0 auto;
+  animation: progress 30s linear forwards;
+}
+
+.timer-text {
+  margin-top: 10px;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+.timer-text span {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+#quiz {
+  text-align: center;
+  margin-top: 120px;
+}
+
+#quiz h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+#quiz h2 strong {
+  font-weight: 700;
+}
+
+#answers {
+  display: inline-block;
+}
+
+#answers button {
+  width: 360px;
+  height: 75px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.178);
+  border: 3px solid white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 12px 20px;
+}
+#answers button:hover {
+  border-color: #00ffff;
+  transform: scale(1.05);
+}
+
+#quiz-footer {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+#counter-progress span {
+  font-weight: 700;
+}
+#total-counter {
+  color: rgb(177, 14, 177);
+}
+.center,
+#buttonL {
+  text-align: center;
+}
+#correct,
+#ring,
+#wrong {
+  display: inline-block;
+}
+#wrong {
+  text-align: right;
+}
+#Lmain {
+  text-align: center;
+}
+ */

@@ -73,203 +73,121 @@ header img {
   box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
   font-size: 20px;
   font-weight: 700;
-}
-
-#grafico {
-  width: 500px;
-  height: 500px;
-}
-
-.grassetto {
-  font-weight: bold;
-}
-
-#welcome {
-  font-size: 50px;
-}
-
-#istruzioni {
-  color: #d20094;
-  font-size: 30px;
-}
-
-#bottone_welcome {
-  margin-left: 75%;
-  width: 50px;
-  height: 50px;
-}
-
-.fluo_coso {
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-}
-
-.allineato {
-  display: inline-block;
-}
-
-#palle {
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-#palle2 {
-  padding-right: 20%;
-}
-
-#commenthere {
-  outline-width: 0;
-
-  color: white;
-  width: 50%;
-  margin: 2em;
-  background-color: transparent;
-  border-bottom: solid 1.5px;
-  border-bottom-color: #881b80;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-}
-.center {
-  text-align: center;
-}
-.strs {
-  display: inline-block;
-  size: 15px;
-  padding: 1em;
-  width: 20px;
-  height: 20px;
-}
-.titleh {
-  font: bold;
-}
-#header {
-  position: relative;
-  margin-top: 40px;
-  height: 150px;
-}
-
-.timer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-align: center;
-}
-
-#progress-circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: conic-gradient(#00bbff 0deg, #ffffff 360deg);
-  position: relative;
-  margin: 0 auto;
-  animation: progress 30s linear forwards;
-}
-
-.timer-text {
-  margin-top: 10px;
-  line-height: 1.4;
-  font-size: 1rem;
-}
-
-.timer-text span {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-#quiz {
-  text-align: center;
-  margin-top: 120px;
-}
-
-#quiz h2 {
-  font-weight: 400;
-  font-size: 2.5rem;
-  margin-bottom: 60px;
-}
-
-#quiz h2 strong {
-  font-weight: 700;
-}
-
-#answers {
-  display: inline-block;
-}
-
-#answers button {
-  width: 360px;
-  height: 75px;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.178);
-  border: 3px solid white;
-  border-radius: 50px;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 12px 20px;
-}
-#answers button:hover {
-  border-color: #00ffff;
-  transform: scale(1.05);
-}
-
-#quiz-footer {
-  text-align: center;
-  margin-top: 100px;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-}
-
-#counter-progress span {
-  font-weight: 700;
-}
-#total-counter {
-  color: rgb(177, 14, 177);
+  margin-top: 5%;
 }
 .center,
 #buttonL {
   text-align: center;
 }
-#correct,
-#ring,
-#wrong {
+
+#grafico {
+  width: 300px;
+  height: 300px;
+  /* Stashed changes*/
+}
+
+#ring {
   display: inline-block;
+  text-align: center;
 }
 #wrong {
+  position: absolute;
   text-align: right;
+  top: 50%;
+}
+#correct {
+  position: absolute;
+  top: 50%;
+  text-align: left;
+  right: 15%;
 }
 #Lmain {
   text-align: center;
 }
-#commenthere {
-  outline-width: 0;
-
-  color: white;
-  width: 50%;
-  margin: 2em;
-  background-color: transparent;
-  border-bottom: solid 1.5px;
-  border-bottom-color: #881b80;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-}
-.center {
+.center,
+#buttonL {
   text-align: center;
 }
-.strs {
+.timer {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 130px;
+  height: 130px;
+}
+
+#progress-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  background: conic-gradient(#00bcd4 0deg, #00bcd4 360deg, transparent 360deg);
+  /* per nascondere l'interno del cerchio e lasciare solo il bordo visibile
+  -webkit è per safari; mask per tutti gli altri browser */
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 8px),
+    white calc(100% - 8px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 8px),
+    white calc(100% - 8px)
+  );
+}
+
+.timer-text {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 80%;
+}
+.timer-text span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.timer-text small {
+  font-size: 0.5rem;
+  color: white;
+  font-weight: 400;
+}
+/* fine CSS timer */
+
+/* Grafico a ciambella*/
+
+#grafico {
   display: inline-block;
-  size: 15px;
-  padding: 1em;
-  width: 60px;
-  height: auto;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
 }
-.titleh {
-  font-size: 3em;
-  font: bold;
+
+#grafico canvas {
+  width: 100%;
+  height: 100%;
 }
-.titlep {
-  font-size: 2.5em;
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  z-index: 10;
 }
-.feedback {
-  font-size: 2.5em;
+
+.chart-center-text strong {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ffff;
 }
