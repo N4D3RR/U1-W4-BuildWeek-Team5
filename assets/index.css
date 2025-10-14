@@ -150,33 +150,6 @@ header img {
   height: 150px;
 }
 
-.timer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-align: center;
-}
-
-#progress-circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: conic-gradient(#00bbff 0deg, #ffffff 360deg);
-  position: relative;
-  margin: 0 auto;
-  animation: progress 30s linear forwards;
-}
-
-.timer-text {
-  margin-top: 10px;
-  line-height: 1.4;
-  font-size: 1rem;
-}
-
-.timer-text span {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
 #quiz {
   text-align: center;
   margin-top: 120px;
@@ -201,7 +174,7 @@ header img {
   height: 75px;
   color: white;
   background-color: rgba(255, 255, 255, 0.178);
-  border: 3px solid white;
+  border-top: 3px solid white;
   border-radius: 50px;
   font-size: 20px;
   font-weight: 700;
@@ -229,14 +202,120 @@ header img {
 #buttonL {
   text-align: center;
 }
-#correct,
+
+#ring {
+  display: inline-block;
+  text-align: center;
+}
+#wrong {
+  position: absolute;
+  text-align: right;
+  top: 50%;
+}
+#correct {
+  position: absolute;
+  top: 50%;
+  text-align: left;
+  right: 15%;
+}
+#Lmain {
+  text-align: center;
+}
+/*#correct,
 #ring,
 #wrong {
   display: inline-block;
 }
 #wrong {
   text-align: right;
+  margin-left: 50px;
+  padding-bottom: 100px;
 }
 #Lmain {
   text-align: center;
+}
+
+/* CSS timer */
+.timer {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 130px;
+  height: 130px;
+}
+
+#progress-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  background: conic-gradient(#00bcd4 0deg, #00bcd4 360deg, transparent 360deg);
+  /* per nascondere l'interno del cerchio e lasciare solo il bordo visibile
+  -webkit è per safari; mask per tutti gli altri browser */
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 8px),
+    white calc(100% - 8px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 8px),
+    white calc(100% - 8px)
+  );
+}
+
+.timer-text {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 80%;
+}
+.timer-text span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.timer-text small {
+  font-size: 0.5rem;
+  color: white;
+  font-weight: 400;
+}
+/* fine CSS timer */
+
+/* Grafico a ciambella*/
+
+#grafico {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#grafico canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.chart-center-text strong {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ffff;
 }
