@@ -266,51 +266,51 @@ header img {
 }
 
 .timer-text {
-  /* Grafico a ciambella*/
-
-  #grafico {
-    display: inline-block;
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-  }
-
-  #grafico canvas {
-    width: 100%;
-    height: 100%;
-  }
-
-  .chart-center-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    line-height: 1.2;
-    font-size: 1rem;
-    text-align: center;
-    color: white;
-    z-index: 10;
-  }
-
-  .timer-text span {
-    font-size: 3rem;
-    font-weight: 700;
-    color: white;
-  }
-
-  .timer-text small {
-    font-size: 0.5rem;
-    color: white;
-    font-weight: 400;
-  }
-  /* fine CSS timer */
   color: white;
   text-align: center;
   font-size: 14px;
   line-height: 1.4;
   max-width: 80%;
+}
+.timer-text span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.timer-text small {
+  font-size: 0.5rem;
+  color: white;
+  font-weight: 400;
+}
+/* fine CSS timer */
+
+/* Grafico a ciambella*/
+
+#grafico {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#grafico canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  z-index: 10;
 }
 
 .chart-center-text strong {
