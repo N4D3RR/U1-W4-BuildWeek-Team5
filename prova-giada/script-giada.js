@@ -94,23 +94,6 @@ const questions = [
   },
 ]
 
-/* function startCountdown(seconds, onTick) {
-  let current = seconds
-
-  setInterval(() => {
-    onTick(current)
-    current--
-
-    if (current < 0) {
-      current = seconds // ricomincia
-    }
-  }, 1000)
-}
-
-startCountdown(30, (valore) => {
-  console.log('Secondo corrente:', valore)
-}) */
-
 const contenitoreRisposte = document.getElementById('answers')
 const domanda = document.getElementsByClassName('domanda-corrente')
 const main = document.getElementsByTagName('main')
@@ -137,7 +120,7 @@ const bottoni = document.getElementsByClassName('bottone-risposte')
 const riposta = document.getElementsByClassName('risposta-selezionata')
 let seconds2 = 30
 let count = 0
-// lo decremento di 1 ogni secondo
+
 setInterval(() => {
   seconds2--
   for (let i = 0; i < domanda.length; i++) {
@@ -186,7 +169,7 @@ setInterval(() => {
       count = count + 1
       //window.location.href = 'results-giada.html'
     }
-    if (i > questions.length && seconds2 < 0) {
+    if (i > questions.length && seconds2 <= 0) {
       window.location.href = 'results-giada.html'
     }
   }
