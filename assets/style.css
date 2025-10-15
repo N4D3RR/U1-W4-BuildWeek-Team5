@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 body {
   background-image: url(img/bg.png);
   background-position: top;
   background-size: cover;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -140,7 +140,28 @@ li {
   width: 50px;
   height: 50px;
 }
-
+#tasto {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  margin: -5px 20px -5px 0px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+#tasto:checked {
+  background-color: transparent;
+}
+#tasto:checked::after {
+  content: "✔";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  font-size: 14px;
+  color: #000;
+}
 /* --------------------------------------------- QUIZ */
 
 #contenitore-generale-quiz {
@@ -239,7 +260,6 @@ li {
   color: white;
   font-weight: 400;
 }
-
 /* ------------------------------ FEEDBACK */
 #main-feedback {
   width: 1024px;
