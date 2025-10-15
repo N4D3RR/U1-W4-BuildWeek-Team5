@@ -51,6 +51,13 @@
         </div>
         <div id="bottone-welcome">
           <button class="bottone-fluorescente">PROCEED</button>
+          <script>
+            document
+              .querySelector("button")
+              .addEventListener("click", function () {
+                this.classList.toggle("active");
+              });
+          </script>
         </div>
       </main>
     </div>
