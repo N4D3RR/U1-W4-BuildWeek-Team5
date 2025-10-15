@@ -1,3 +1,4 @@
+@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/reset.css" />
     <link rel="stylesheet" href="assets/basestyle.css" />
-    <link rel="stylesheet" href="assets/index.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Feedback</title>
   </head>
   <body>
@@ -13,17 +14,17 @@
       <header>
         <img src="./assets/img/epicode_logo.png" alt="EPICODE logo" />
       </header>
-      <main class="center">
+      <main id="main-feedback">
         <div>
           <!-- title -->
           <h1 class="titleh">Tell us how it's going</h1>
           <!-- subtitle -->
-          <p class="titlep">
+          <p class="feedback">
             From 0 to 10 how likely are you to recommend EPICODE <br />
-            to a friend or a colleague
+            to a friend or a colleague?
           </p>
         </div>
-        <div>
+        <div id="stars-container">
           <img class="strs" src="./assets/img/star.svg" alt="star" />
           <img class="strs" src="./assets/img/star.svg" alt="star" />
           <img class="strs" src="./assets/img/star.svg" alt="star" />
@@ -44,11 +45,11 @@
             <input
               id="commenthere"
               type="text"
-              placeholder="Write your comment here"
+              placeholder="           Write your comment here"
             />
           </div>
         </div>
-        <div>
+        <div id="more-info-container">
           <a href="https://epicode.com/it/" target="_blank">
             <button class="bottone-fluorescente">MORE INFO</button>
           </a>
