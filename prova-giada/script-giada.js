@@ -126,7 +126,7 @@ setInterval(() => {
   for (let i = 0; i < domanda.length; i++) {
     domanda[i].innerText = questions[count].question
   }
-  if (seconds2 > 28) {
+  if (seconds2 > 30) {
     for (let i = 0; i < tutteLeRisposte[count].length; i++) {
       let bottone = document.createElement('button')
       bottone.classList.add('bottone-risposte')
@@ -174,8 +174,6 @@ setInterval(() => {
     }
   }
 }, 1000)
-
-localStorage.setItem(elencoElenchiRisposte)
 
 const counterDomande = document.getElementById('counter-questions')
 let nDomandaPage = document.createElement('p')

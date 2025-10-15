@@ -6,8 +6,8 @@ let seconds = totalSeconds
 
 const startTimer = () => {
   const timer = setInterval(() => {
-    seconds--
     secondsText.textContent = seconds
+    seconds--
 
     // Calcola i gradi/secondi già trascorsi (da 0 a 360)
     const percentElapsed = ((totalSeconds - seconds) / totalSeconds) * 100
@@ -19,7 +19,6 @@ const startTimer = () => {
     } else {
       clearInterval(timer)
       circle.style.background = 'transparent'
-      seconds = totalSeconds + 1
 
       //  Dopo 1 secondo, ricomincia
       setTimeout(() => {
