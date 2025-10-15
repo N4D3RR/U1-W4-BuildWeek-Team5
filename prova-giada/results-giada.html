@@ -16,17 +16,87 @@
       <main id="main-results">
         <h1 id="results">Results</h1>
         <h3 id="summary">The summary of your answers:</h3>
-        <div id="correct"></div>
+
+        <h2 id="final-score"></h2>
+
         <div id="grafico">
           <canvas id="myChart"></canvas>
         </div>
+
+        <div id="correct"></div>
         <div id="wrong"></div>
+
         <div id="buttonL">
           <button class="rate-us" id="button">RATE US</button>
+          <button class="rate-us" onclick="restartQuiz()">RESTART QUIZ</button>
         </div>
       </main>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../javascript-grafico-giada.js"></script>
+
+    <script>
+      // Recupera i risultati dal localStorage
+      const risultati = JSON.parse(localStorage.getItem("risultatiQuiz")) || []
+
+      let corrette = 0
+      let sbagliate = 0
+
+      risultati.forEach((risposta) => {
+        if (risposta.corretta) {
+          corrette++
+        } else {
+          sbagliate++
+        }
+      })
+
+      // Mostra punteggio
+      document.getElementById(
+        "correct"
+      ).innerText = `✅ Correct answers: ${corrette}`
+      document.getElementById(
+        "wrong"
+      ).innerText = `❌ Wrong answers: ${sbagliate}`
+      document.getElementById(
+        "final-score"
+      ).innerText = `You scored ${corrette} out of ${risultati.length}`
+
+      // Crea il grafico
+      const ctx = document.getElementById("myChart").getContext("2d")
+      const myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Correct", "Wrong"],
+          datasets: [
+            {
+              data: [corrette, sbagliate],
+              backgroundColor: ["#00ffcc", "#ff0077"],
+              borderColor: ["#00ccaa", "#cc0055"],
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "bottom",
+              labels: {
+                color: "#ffffff",
+                font: {
+                  size: 14,
+                },
+              },
+            },
+          },
+        },
+      })
+
+      // Funzione per rifare il quiz
+      function restartQuiz() {
+        localStorage.removeItem("risultatiQuiz")
+        window.location.href = "quiz.html" // aggiorna con il nome corretto del file quiz
+      }
+    </script>
   </body>
 </html>
