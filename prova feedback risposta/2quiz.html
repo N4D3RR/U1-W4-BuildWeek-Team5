@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/reset.css" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/basestyle.css" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/style.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <!-- logo e timer -->
+    <div id="contenitore-generale-quiz">
+      <header id="header-quiz">
+        <img
+          class="logo-quiz"
+          src="/PROVA NAD/assets/img/epicode_logo.png"
+          alt="logo epicode"
+        />
+        <!-- timer -->
+        <div id="tempo">
+          <div class="timer">
+            <div id="progress-circle"></div>
+            <div class="timer-text">
+              <p>
+                <small
+                  >SECONDS<br /><span id="seconds"></span><br />REMAINING</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="main-quiz">
+        <!-- domanda e risposte -->
+        <div id="domande-risposte">
+          <div class="domanda">
+            <p class="domanda-corrente"></p>
+          </div>
+          <div id="answers"></div>
+          <!--feedback immediato della risposta  -->
+          <div id="feedback"></div>
+        </div>
+        <div id="domande-risposte">
+          <div id="counter-questions">
+            <p>
+              QUESTION
+              <span id="counter">1</span>
+              <span id="total-counter">/10</span>
+            </p>
+          </div>
+        </div>
+        <button class="bottone-fluorescente" id="bottone-avanti">AVANTI</button>
+      </main>
+      <!-- counter domande -->
+    </div>
+    <script src="/PROVA NAD/scripts/timer.js"></script>
+    <script src="/prova feedback risposta/quiz.js"></script>
+  </body>
+</html>
