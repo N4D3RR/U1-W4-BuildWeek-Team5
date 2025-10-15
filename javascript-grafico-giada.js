@@ -5,6 +5,8 @@ window.addEventListener('DOMContentLoaded', function () {
   const wrongAnswers = totalQuestions - correctAnswers
 
   // CALCOLO PERCENTUALI
+  const correctPercent = ((correctAnswers / totalQuestions) * 100).toFixed(1)
+  const wrongPercent = (100 - correctPercent).toFixed(1)
 
   // TESTO SUI BLOCCHI LATERALI
   document.getElementById('correct').innerHTML = `
@@ -27,35 +29,37 @@ window.addEventListener('DOMContentLoaded', function () {
   centerText.innerHTML = `
     <strong>Congratulations!</strong>
     You passed the exam.<br>
-    <small>Check your email<br>(including spam/promotions)</small>`
+    <small>Check your email<br>(including spam/promotions)</small>
+  `
+
+  chartContainer.appendChild(centerText)
 
   // GRAFICO
   const ctx = document.getElementById('myChart')
 
-  new Chart(ctx),
-    {
-      type: 'doughnut',
-      data: {
-        labels: ['Correct', 'Wrong'],
-        datasets: [
-          {
-            data: [correctAnswers, wrongAnswers],
-            backgroundColor: ['#00FFFF', '#D20094'],
-            borderWidth: 0,
-          },
-        ],
-      },
-      options: {
-        cutout: '70%',
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          tooltip: { enabled: true },
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Correct', 'Wrong'],
+      datasets: [
+        {
+          data: [correctAnswers, wrongAnswers],
+          backgroundColor: ['#00FFFF', '#D20094'],
+          borderWidth: 0,
         },
-        title: {
-          display: true,
-          text: 'Il mio grafico',
-        },
+      ],
+    },
+    options: {
+      cutout: '70%',
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: true },
       },
-    }
+      title: {
+        display: true,
+        text: 'Il mio grafico',
+      },
+    },
+  })
 })
