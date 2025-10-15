@@ -1,5 +1,5 @@
-const circle = document.getElementById("progress-circle")
-const secondsText = document.getElementById("seconds")
+const circle = document.getElementById('progress-circle')
+const secondsText = document.getElementById('seconds')
 
 const totalSeconds = 30
 let seconds = totalSeconds
@@ -22,7 +22,7 @@ const startTimer = () => {
     } else {
       // Quando arriva a 0, ferma il timer e resetta
       clearInterval(timer)
-      circle.style.background = "transparent"
+      circle.style.background = 'transparent'
 
       // Dopo 1 secondo, riparte da 30
       setTimeout(() => {
