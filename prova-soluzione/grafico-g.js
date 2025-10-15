@@ -52,11 +52,11 @@ window.addEventListener("DOMContentLoaded", function () {
   new Chart(ctx, {
     type: "doughnut",
     data: {
-      labels: ["Correct", "Wrong"],
+      labels: ["Correct", "Wrong"].reverse(),
       datasets: [
         {
-          data: [correctAnswers, wrongAnswers],
-          backgroundColor: ["#00FFFF", "#D20094"],
+          data: [correctAnswers, wrongAnswers].reverse(),
+          backgroundColor: ["#00FFFF", "#D20094"].reverse(),
           borderWidth: 0,
         },
       ],
