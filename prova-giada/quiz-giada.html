@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/reset.css" />
+    <link rel="stylesheet" href="../assets/basestyle.css" />
+    <link rel="stylesheet" href="style-giada.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <!-- logo e timer -->
+    <div id="contenitore-generale-quiz">
+      <header id="header-quiz">
+        <img
+          class="logo-quiz"
+          src="../assets/img/epicode_logo.png"
+          alt="logo epicode"
+        />
+        <!-- timer -->
+        <div id="tempo">
+          <div class="timer">
+            <div id="progress-circle"></div>
+            <div class="timer-text">
+              <p>
+                <small
+                  >SECONDS<br /><span id="seconds">30</span
+                  ><br />REMAINING</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="main-quiz">
+        <!-- domanda e risposte -->
+        <div class="domanda">
+          <p class="domanda-corrente"></p>
+        </div>
+        <div id="answers"></div>
+        <div id="counter-questions">
+          <p>
+            QUESTION
+            <span id="counter">1</span>
+            <span id="total-counter">/10</span>
+          </p>
+        </div>
+      </main>
+      <!-- counter domande -->
+    </div>
+    <script src="../scripts/timer.js"></script>
+    <script src="script-giada.js"></script>
+  </body>
+</html>

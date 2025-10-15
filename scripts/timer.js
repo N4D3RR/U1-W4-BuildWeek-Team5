@@ -1,25 +1,33 @@
 const circle = document.getElementById("progress-circle");
 const secondsText = document.getElementById("seconds");
 
-let seconds = 30;
 const totalSeconds = 30;
+let seconds = totalSeconds;
+let timer;
 
-const timer = setInterval(() => {
-  seconds--;
+const startTimer = (onFinish) => {
+  clearInterval(timer);
+  seconds = totalSeconds;
   secondsText.textContent = seconds;
+  circle.style.background = "transparent";
 
-  // Calcola i gradi/secondi già trascorsi (da 0 a 360)
-  const percentElapsed = ((totalSeconds - seconds) / totalSeconds) * 100;
-  const degreesElapsed = (percentElapsed / 100) * 360;
+  timer = setInterval(() => {
+    seconds--;
+    secondsText.textContent = seconds;
 
-  // Mostra solo la parte rimanente
-  if (seconds > 0) {
-    circle.style.background = `conic-gradient(transparent 0deg, transparent ${degreesElapsed}deg, #00bcd4 ${degreesElapsed}deg, #00bcd4 360deg)`;
-  } else {
-    circle.style.background = "transparent";
-  }
+    const percentElapsed = ((totalSeconds - seconds) / totalSeconds) * 100;
+    const degreesElapsed = (percentElapsed / 100) * 360;
 
-  if (seconds === 0) {
-    clearInterval(timer);
-  }
-}, 1000);
+    if (seconds > 0) {
+      circle.style.background = `conic-gradient(transparent 0deg, transparent ${degreesElapsed}deg, #00bcd4 ${degreesElapsed}deg, #00bcd4 360deg)`;
+    } else {
+      clearInterval(timer);
+      circle.style.background = "transparent";
+      if (onFinish) onFinish();
+    }
+  }, 1000);
+};
+
+const stopTimer = () => {
+  clearInterval(timer);
+};
