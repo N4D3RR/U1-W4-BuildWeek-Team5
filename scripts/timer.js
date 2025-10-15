@@ -1,5 +1,5 @@
-const circle = document.getElementById("progress-circle")
-const secondsText = document.getElementById("seconds")
+const circle = document.getElementById('progress-circle')
+const secondsText = document.getElementById('seconds')
 
 const totalSeconds = 30
 let seconds = totalSeconds
@@ -15,10 +15,11 @@ const startTimer = () => {
 
     // Mostra solo la parte rimanente
     if (seconds > 0) {
-      circle.style.background = conic-gradient(transparent 0deg, transparent ${degreesElapsed}deg, #00bcd4 ${degreesElapsed}deg, #00bcd4 360deg)
+      circle.style.background = `conic-gradient(transparent 0deg, transparent ${degreesElapsed}deg, #00bcd4 ${degreesElapsed}deg, #00bcd4 360deg)`
     } else {
       clearInterval(timer)
-      circle.style.background = "transparent"
+      circle.style.background = 'transparent'
+      seconds = totalSeconds + 1
 
       //  Dopo 1 secondo, ricomincia
       setTimeout(() => {
@@ -28,4 +29,4 @@ const startTimer = () => {
     }
   }, 1000)
 }
-startTimer() 
+startTimer()

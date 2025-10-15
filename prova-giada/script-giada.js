@@ -175,6 +175,8 @@ setInterval(() => {
   }
 }, 1000)
 
+localStorage.setItem(elencoElenchiRisposte)
+
 const counterDomande = document.getElementById('counter-questions')
 let nDomandaPage = document.createElement('p')
 
