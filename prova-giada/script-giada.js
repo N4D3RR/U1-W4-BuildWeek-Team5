@@ -113,6 +113,8 @@ startCountdown(30, (valore) => {
 
 const contenitoreRisposte = document.getElementById('answers')
 const domanda = document.getElementsByClassName('domanda-corrente')
+const main = document.getElementsByTagName('main')
+console.log('MAIN', main)
 
 let tutteLeRisposte = []
 let random
@@ -182,13 +184,16 @@ setInterval(() => {
       }
       seconds2 = 30
       count = count + 1
-      window.location.href = 'results-giada.html'
+      //window.location.href = 'results-giada.html'
     }
-    if (i === 9 && seconds2 < 0) {
-      window.location.href = 'results.html'
+    if (i > questions.length && seconds2 < 0) {
+      window.location.href = 'results-giada.html'
     }
   }
 }, 1000)
+
+const counterDomande = document.getElementById('counter-questions')
+let nDomandaPage = document.createElement('p')
 
 for (let i = bottoni.length - 1; i >= 0; i--) {
   let risposta = bottoni[i].innerText
