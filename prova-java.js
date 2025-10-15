@@ -1,52 +1,52 @@
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener("DOMContentLoaded", function () {
   // DATI DEL QUIZ
-  const totalQuestions = 6
-  const correctAnswers = 4
-  const wrongAnswers = totalQuestions - correctAnswers
+  const totalQuestions = 6;
+  const correctAnswers = 4;
+  const wrongAnswers = totalQuestions - correctAnswers;
 
   // CALCOLO PERCENTUALI
 
   // TESTO SUI BLOCCHI LATERALI
-  document.getElementById('correct').innerHTML = `
-    <p class="titolo-results">Correct<p>
+  document.getElementById("correct").innerHTML = `
+    <p class="titolo-results">Correct</p>
     <p class="percentuale">${correctPercent}%</p>
     <p class="n-domande">${correctAnswers}/${totalQuestions} questions</p>
-  `
+  `;
 
-  document.getElementById('wrong').innerHTML = `
+  document.getElementById("wrong").innerHTML = `
     <p class="titolo-results">Wrong</p>
     <p class="percentuale">${wrongPercent}%</p>
     <p class="n-domande">${wrongAnswers}/${totalQuestions} questions</p>
-  `
+  `;
 
   // DIV PER TESTO CENTRALE
-  const chartContainer = document.getElementById('grafico')
-  const centerText = document.createElement('div')
-  centerText.classList.add('chart-center-text')
+  const chartContainer = document.getElementById("grafico");
+  const centerText = document.createElement("div");
+  centerText.classList.add("chart-center-text");
 
   centerText.innerHTML = `
     <strong>Congratulations!</strong>
     You passed the exam.<br>
-    <small>Check your email<br>(including spam/promotions)</small>`
+    <small>Check your email<br>(including spam/promotions)</small>`;
 
   // GRAFICO
-  const ctx = document.getElementById('myChart')
+  const ctx = document.getElementById("myChart");
 
   new Chart(ctx),
     {
-      type: 'doughnut',
+      type: "doughnut",
       data: {
-        labels: ['Correct', 'Wrong'],
+        labels: ["Correct", "Wrong"],
         datasets: [
           {
             data: [correctAnswers, wrongAnswers],
-            backgroundColor: ['#00FFFF', '#D20094'],
+            backgroundColor: ["#00FFFF", "#D20094"],
             borderWidth: 0,
           },
         ],
       },
       options: {
-        cutout: '70%',
+        cutout: "70%",
         responsive: true,
         plugins: {
           legend: { display: false },
@@ -54,8 +54,8 @@ window.addEventListener('DOMContentLoaded', function () {
         },
         title: {
           display: true,
-          text: 'Il mio grafico',
+          text: "Il mio grafico",
         },
       },
-    }
-})
+    };
+});
