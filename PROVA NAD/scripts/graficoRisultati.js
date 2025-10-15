@@ -5,8 +5,8 @@ console.log("Valori salvati:", risposte)
 window.addEventListener("DOMContentLoaded", function () {
   // DATI DEL QUIZ  - - - - MODIFICATO PER PRENDERE DATI DAL LOCALSTORAGE
   const totalQuestions = risposte.length
-  const correctAnswers = risposte.filter((r) => r.corretta).length
-  const wrongAnswers = risposte.filter((r) => !r.corretta).length
+  const correctAnswers = risposte.filter((r) => r.corretta === true).length
+  const wrongAnswers = risposte.filter((r) => r.corretta === false).length
 
   // CALCOLO PERCENTUALI
   const correctPercent = ((correctAnswers / totalQuestions) * 100).toFixed(1)
