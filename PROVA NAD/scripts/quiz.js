@@ -178,7 +178,7 @@ avanti.addEventListener("click", function () {
   // aggiorna domanda nel DOM
   //all'ultima domanda, manda a results
   if (count >= questions.length) {
-    window.location.href = "/DEFINITIVO/3results.html"
+    window.location.href = "/PROVA NAD/3results.html"
   }
   for (let i = 0; i < domanda.length; i++) {
     domanda[i].innerText = questions[count]?.question || ""
