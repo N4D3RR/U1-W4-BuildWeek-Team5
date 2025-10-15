@@ -16,7 +16,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -174,7 +174,7 @@ avanti.addEventListener("click", function () {
     aggiungiRisposta({ rispostaUtente: elencoRisposte[0], corretta: false })
   }
   count++
-  document.getElementById("counter").textContent = count + 1
+  document.getElementById("counter").textContent = count + 1 //aggiorna counter domande anche premendo tasto avanti
   // aggiorna domanda nel DOM
   //all'ultima domanda, manda a results
   if (count >= questions.length) {
