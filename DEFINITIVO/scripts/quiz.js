@@ -151,6 +151,7 @@ const onTimerFinish = function () {
     aggiungiRisposta({ rispostaUtente: elencoRisposte[0], corretta: false })
   }
   count++
+  document.getElementById("counter").textContent = count + 1 //per aggiornare il numero domanda
   for (let i = 0; i < domanda.length; i++) {
     domanda[i].innerText = questions[count]?.question || ""
   }
@@ -173,6 +174,8 @@ avanti.addEventListener("click", function () {
     aggiungiRisposta({ rispostaUtente: elencoRisposte[0], corretta: false })
   }
   count++
+  document.getElementById("counter").textContent = count + 1
+  // aggiorna domanda nel DOM
   //all'ultima domanda, manda a results
   if (count >= questions.length) {
     window.location.href = "/DEFINITIVO/3results.html"
