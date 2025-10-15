@@ -94,6 +94,10 @@ header img {
   text-align: center;
 }
 
+#domande-risposte {
+  margin-top: auto;
+}
+
 #header-quiz {
   position: relative;
 }

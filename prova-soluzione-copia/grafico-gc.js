@@ -44,16 +44,19 @@ window.addEventListener('DOMContentLoaded', function () {
   new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ['Correct', 'Wrong'],
+      labels: ['Correct', 'Wrong'].reverse(),
       datasets: [
         {
-          data: [correctAnswers, wrongAnswers],
-          backgroundColor: ['#00FFFF', '#D20094'],
+          data: [correctAnswers, wrongAnswers].reverse(),
+          backgroundColor: ['#00FFFF', '#D20094'].reverse(),
           borderWidth: 0,
         },
       ],
     },
     options: {
+      borderAlign: 'inner',
+      rotation: 360, // Parte dall’alto (puoi regolare questo angolo)
+      circumference: 360, // Negativo = senso antiorario
       cutout: '70%',
       responsive: true,
       plugins: {
