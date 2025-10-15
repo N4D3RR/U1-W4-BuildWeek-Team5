@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 body {
-  background-image: url(img/bg.png);
+  background-image: url(../assets/img/bg.png);
   background-position: top;
   background-size: cover;
   font-family: "Outfit", sans-serif;
@@ -35,7 +35,7 @@ header img {
   background-color: #00ffff;
   border: none;
   box-shadow: 0px 0px 35px 15px rgba(0, 255, 255, 0.4);
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 700;
 }
 
@@ -62,6 +62,7 @@ header img {
   border-radius: 50px;
   font-size: 20px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .rate-us {
@@ -79,91 +80,6 @@ header img {
   font-weight: bold;
 }
 
-/* ----------------------------------- WELCOME */
-#main-welcome {
-  width: 1024px;
-  height: 768px;
-  position: relative;
-  margin: 0 auto;
-}
-
-#welcome {
-  position: absolute;
-  font-weight: 400;
-  font-size: 100px;
-  margin: 100px 0;
-}
-
-#termini {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-#bottone-welcome {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-#instructions {
-  position: absolute;
-  top: 40%;
-  left: 0;
-}
-
-li {
-  margin: 10px;
-  font-size: 1.3em;
-}
-
-#promise {
-  padding: 27px 0;
-}
-
-#istruzioni {
-  color: #d20094;
-  font-size: 40px;
-  margin-bottom: 0;
-}
-
-#instructions p {
-  margin: 20px 0;
-  font-size: 1.3em;
-}
-
-#termini p {
-  margin: 0;
-}
-
-#bottone_welcome {
-  width: 50px;
-  height: 50px;
-}
-#tasto {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 3px solid white;
-  margin: -5px 20px -5px 0px;
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
-}
-#tasto:checked {
-  background-color: transparent;
-}
-#tasto:checked::after {
-  content: "✔";
-  position: absolute;
-  top: -2px;
-  left: 2px;
-  font-size: 14px;
-  color: white;
-}
-/* --------------------------------------------- QUIZ */
-
 #contenitore-generale-quiz {
   width: 1024px;
   padding: 0 100px;
@@ -172,10 +88,15 @@ li {
 }
 
 #main-quiz {
+  position: relative;
   width: 1024px;
   height: 768px;
   margin: 0 auto;
   text-align: center;
+}
+
+#domande-risposte {
+  margin-top: auto;
 }
 
 #header-quiz {
@@ -189,13 +110,14 @@ li {
   left: 0;
   margin: 0;
 }
-
+/*  */
 .domanda {
   margin: 0 auto;
   padding-top: 160px;
   font-size: 55px;
 }
-
+#answer {
+}
 #tempo {
   display: inline-block;
   position: absolute;
@@ -204,7 +126,8 @@ li {
 }
 
 #counter-questions {
-  margin-top: 100px;
+  margin-top: 30px;
+  margin-bottom: 100px;
   font-size: 20px;
   font-weight: 500;
 }
@@ -260,135 +183,43 @@ li {
   color: white;
   font-weight: 400;
 }
-#answer {
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+#counter-questions {
+  padding-bottom: 13px;
+  margin: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
 }
-/* ------------------------------ FEEDBACK */
-#main-feedback {
-  width: 1024px;
-  height: 768px;
-  margin: 0 auto;
-  text-align: center;
+#questo {
+  margin: 0px;
 }
-
-#commenthere {
-  outline-width: 0;
-
-  color: white;
-  width: 80%;
-  margin: 2em;
-  padding-bottom: 6px;
+#bottone-avanti {
+  padding: 0px;
+  box-shadow: none;
   background-color: transparent;
-  border-bottom: solid 3px;
-  border-bottom-color: #881b80;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  font-size: 18px;
-}
 
-#stars-container {
-  margin-bottom: 100px;
-}
-
-.strs {
-  display: inline-block;
-  size: 20px;
-  margin: 5px;
+  height: 50px;
   width: 50px;
-  height: auto;
-}
-.titleh {
-  font-size: 3em;
-  font: bold;
-  padding-top: 90px;
-}
-.feedback {
-  font-size: 1.8em;
-}
-
-#more-info-container {
-  margin-top: 35px;
-}
-
-/* ---------------------------------------------- RESULTS */
-
-#main-results {
-  width: 1024px;
-  height: 768px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 70px;
-  position: relative;
-}
-
-#results {
-  font-size: 50px;
-  margin-bottom: 0;
-}
-
-#summary {
-  font-weight: 300;
-  font-size: 25px;
-  margin-top: 10px;
-}
-
-#wrong {
   position: absolute;
-  top: 42%;
-  text-align: right;
   right: 0;
+  cursor: pointer;
+  bottom: 0;
 }
 
-#correct {
-  position: absolute;
-  text-align: left;
-  top: 42%;
-}
-
-.titolo-results {
-  margin: 0;
-  padding: 0;
-  font-size: 50px;
-}
-
-.percentuale {
-  margin: 0;
-  padding: 0;
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.n-domande {
-  font-size: 20px;
-  margin-top: 6px;
-}
-
-#grafico {
-  display: inline-block;
+#dom-ris {
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
 
-.chart-center-text {
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  line-height: 1.2;
-  font-size: 1rem;
-  text-align: center;
-  color: white;
-  z-index: 10;
+  height: 50px;
 }
-
-.chart-center-text strong {
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
+#iconagiada {
+  font-size: 40px;
+  border-radius: 100%;
   color: #00ffff;
+  box-shadow: 0px 0px 35px 15px rgba(0, 255, 255, 0.4);
+  box-shadow: inset 0px 20px 77px -3px rgba(0, 255, 255, 0.4);
+}
+#contenitoredim {
+  position: absolute;
+  bottom: 0;
 }
