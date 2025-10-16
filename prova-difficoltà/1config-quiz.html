@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/reset.css" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/basestyle.css" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/style.css" />
+    <title>Configura Quiz</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="/PROVA NAD/assets/img/epicode_logo.png"
+        alt="logo epicode"
+        style="max-width: 200px; margin-bottom: 30px"
+      />
+    </header>
+    <div class="config-container">
+      <h1>Configura il tuo Quiz</h1>
+
+      <div class="config-section">
+        <h2>Seleziona la difficoltà:</h2>
+        <div class="difficulty-buttons">
+          <button class="difficulty-btn" data-difficulty="easy">Facile</button>
+          <button class="difficulty-btn" data-difficulty="medium">Medio</button>
+          <button class="difficulty-btn" data-difficulty="hard">
+            Difficile
+          </button>
+        </div>
+      </div>
+
+      <div class="config-section">
+        <h2>Numero di domande:</h2>
+        <div class="number-input-container">
+          <button class="number-btn" onclick="changeNumber(-1)">-</button>
+          <input
+            type="number"
+            class="number-input"
+            id="numQuestions"
+            min="5"
+            max="15"
+            value="10"
+          />
+          <button class="number-btn" onclick="changeNumber(1)">+</button>
+        </div>
+        <p><small>Scegli tra 5 e 10 domande</small></p>
+        <div id="error-message" class="error-message"></div>
+      </div>
+
+      <button class="start-quiz-btn" id="startBtn" disabled>Inizia Quiz</button>
+    </div>
+
+    <script src="config-quiz.js"></script>
+  </body>
+</html>
