@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 body {
-  background-image: url(img/bg.png);
+  background-image: url(./bg.jpg);
   background-position: top;
   background-size: cover;
   font-family: "Outfit", sans-serif;
@@ -63,7 +63,9 @@ header img {
   font-size: 20px;
   font-weight: 700;
 }
-
+.risposta-selezionata:hover {
+  background-color: #d2009386;
+}
 .rate-us {
   width: 230px;
   height: 70px;

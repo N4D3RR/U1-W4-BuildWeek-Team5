@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="/PROVA NAD/assets/reset.css" />
     <link rel="stylesheet" href="/PROVA NAD/assets/basestyle.css" />
     <link rel="stylesheet" href="/PROVA NAD/assets/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <title>Quiz</title>
   </head>
   <body>
@@ -24,7 +33,8 @@
             <div class="timer-text">
               <p>
                 <small
-                  >SECONDS<br /><span id="seconds"></span><br />REMAINING</small
+                  >SECONDS<br /><span id="seconds">30</span
+                  ><br />REMAINING</small
                 >
               </p>
             </div>
@@ -34,22 +44,36 @@
 
       <main id="main-quiz">
         <!-- domanda e risposte -->
-        <div id="domande-risposte">
+        <div id="contenitore-domanda-main">
           <div class="domanda">
             <p class="domanda-corrente"></p>
           </div>
-          <div id="answers"></div>
-        </div>
-        <div id="domande-risposte">
-          <div id="counter-questions">
-            <p>
-              QUESTION
-              <span id="counter">1</span>
-              <span id="total-counter">/10</span>
-            </p>
+          <div id="contenitore-risposte-main">
+            <div id="blocco-in-basso">
+              <div id="blocco-in-basso-2">
+                <div id="contenitore-risposte">
+                  <div id="answers"></div>
+                  <div id="feedback"></div>
+                </div>
+                <!--feedback immediato della risposta  -->
+              </div>
+            </div>
           </div>
         </div>
-        <button class="bottone-fluorescente" id="bottone-avanti">AVANTI</button>
+        <div id="contenitoredim">
+          <div id="dom-ris">
+            <div id="counter-questions">
+              <p id="questo">
+                QUESTION
+                <span id="counter">1</span>
+                <span id="total-counter">/10</span>
+              </p>
+            </div>
+            <button class="bottone-fluorescente" id="bottone-avanti">
+              <ion-icon id="iconagiada" name="arrow-forward-circle"></ion-icon>
+            </button>
+          </div>
+        </div>
       </main>
       <!-- counter domande -->
     </div>
