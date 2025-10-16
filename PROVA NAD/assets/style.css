@@ -356,20 +356,19 @@ li {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background: transparent;
   position: absolute;
-  background: conic-gradient(#00bcd4 0deg, #00bcd4 360deg, transparent 360deg);
+  background: conic-gradient(#00ffff 0deg, #00ffff 360deg);
   /* per nascondere l'interno del cerchio e lasciare solo il bordo visibile
   -webkit è per safari; mask per tutti gli altri browser */
   -webkit-mask: radial-gradient(
     farthest-side,
-    transparent calc(100% - 8px),
-    white calc(100% - 8px)
+    transparent calc(100% - 15px),
+    white calc(0% - 8px)
   );
   mask: radial-gradient(
     farthest-side,
-    transparent calc(100% - 8px),
-    white calc(100% - 8px)
+    transparent calc(100% - 15px),
+    white calc(0% - 8px)
   );
 }
 

@@ -19,7 +19,7 @@ const startTimer = (onFinish) => {
     const degreesElapsed = (percentElapsed / 100) * 360
 
     if (seconds > 0) {
-      circle.style.background = `conic-gradient(transparent 0deg, transparent ${degreesElapsed}deg, #00bcd4 ${degreesElapsed}deg, #00bcd4 360deg)`
+      circle.style.background = `conic-gradient(transparent 0deg, transparent ${degreesElapsed}deg, #00ffff ${degreesElapsed}deg, #00ffff 360deg)`
     } else {
       clearInterval(timer)
       circle.style.background = "transparent"
