@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 body {
   background-image: url(../assets/img/bg.png);
   background-position: top;
   background-size: cover;
-  font-family: "Outfit", sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -125,13 +125,6 @@ header img {
   right: 0;
 }
 
-#counter-questions {
-  margin-top: 30px;
-  margin-bottom: 100px;
-  font-size: 20px;
-  font-weight: 500;
-}
-
 #total-counter {
   color: #d20094;
 }
@@ -222,4 +215,6 @@ header img {
 #contenitoredim {
   position: absolute;
   bottom: 0;
+  height: 50px;
+  width: 1024px;
 }
