@@ -38,6 +38,16 @@ header img {
   font-size: 20px;
   font-weight: 700;
 }
+.bottone-fluorescente:hover {
+  width: 250px;
+  height: 70px;
+  color: white;
+  background-color: rgb(157, 1, 141);
+  border: none;
+  box-shadow: 0px 0px 35px 15px rgba(157, 1, 141, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+}
 
 .bottone-risposte {
   width: 360px;
@@ -45,23 +55,48 @@ header img {
   color: white;
   margin: 10px 25px;
   background-color: rgba(255, 255, 255, 0.178);
-  border: 3px solid white;
-  /* border: 2px solid transparent;
-  border-image: linear-gradient(to top left, transparent, white) 1; */
+
+  /* border-top: 2px solid transparent; */
+  /* border-image: linear-gradient(to top left, transparent, white) 1; */
   border-radius: 50px;
   font-size: 20px;
   font-weight: 700;
+  border: none;
+  box-shadow: inset 1.5px 1.5px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .risposta-selezionata {
   width: 360px;
-  height: 75px;
+  height: 80px;
+
+  background: linear-gradient(#d20094, #a80076) padding-box,
+    linear-gradient(
+        to right bottom,
+        #ffffff,
+        #e3d2f7,
+        #d7a2e3,
+        #d20094,
+        #d20094
+      )
+      border-box;
+  background-clip: padding-box, border-box;
+
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  font-weight: 700;
+}
+.bottone-risposte:hover {
+  width: 360px;
+  height: 80px;
   color: white;
-  background-color: #d20094;
-  border: 3px solid white;
+  margin: 10px 25px;
+  background-color: rgba(255, 255, 255, 0.416);
   border-radius: 50px;
   font-size: 20px;
   font-weight: 700;
+  border: none;
+  box-shadow: inset 1.5px 1.5px 1px 2px rgba(255, 255, 255, 0.7);
 }
 
 .rate-us {
@@ -71,6 +106,16 @@ header img {
   background: none;
   border: 2px solid white;
   box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+}
+.rate-us:hover {
+  width: 230px;
+  height: 70px;
+  color: white;
+  background: none;
+  border: 2px solid rgb(157, 1, 141);
+  box-shadow: 0px 0px 35px 15px rgba(157, 1, 141, 0.4);
   font-size: 20px;
   font-weight: 700;
 }
@@ -163,19 +208,107 @@ li {
   color: white;
 }
 /* --------------------------------------------- QUIZ */
+#contenitore-risposte-main {
+  position: absolute;
+  width: 1024px;
+  height: 300px;
+}
+
+#contenitore-risposte {
+  position: relative;
+  height: 250px;
+  width: 850px;
+  margin: 0 auto;
+}
+
+#answers {
+  width: 850px;
+}
+
+#contenitore-domanda-main {
+  position: absolute;
+  width: 1024px;
+}
+
+.domanda {
+  position: relative;
+  width: 800px;
+  height: 200px;
+}
+
+.domanda-corrente {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  font-size: 40px;
+  width: 800px;
+}
+
+#counter-questions {
+  padding-bottom: 13px;
+  margin: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+#questo {
+  margin: 0px;
+}
+#bottone-avanti {
+  padding: 0px;
+  box-shadow: none;
+  background-color: transparent;
+
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  bottom: 0;
+}
+
+#dom-ris {
+  position: relative;
+
+  height: 50px;
+}
+#iconagiada {
+  font-size: 40px;
+  border-radius: 100%;
+  color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.4);
+  background-color: #00ffff5b;
+}
+#iconagiada:hover {
+  font-size: 40px;
+  border-radius: 100%;
+  color: rgb(157, 1, 141);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.4);
+  background-color: rgba(157, 1, 141, 0.316);
+  border: none;
+  box-shadow: 0px 0px 35px 15px rgba(157, 1, 141, 0.4);
+}
+#contenitoredim {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 1024px;
+}
+#main-quiz {
+  position: relative;
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
 
 #contenitore-generale-quiz {
   width: 1024px;
   padding: 0 100px;
   margin: auto;
   margin-top: 7.5%;
-}
-
-#main-quiz {
-  width: 1024px;
-  height: 768px;
-  margin: 0 auto;
-  text-align: center;
 }
 
 #header-quiz {
@@ -223,20 +356,19 @@ li {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background: transparent;
   position: absolute;
-  background: conic-gradient(#00bcd4 0deg, #00bcd4 360deg, transparent 360deg);
+  background: conic-gradient(#00ffff 0deg, #00ffff 360deg);
   /* per nascondere l'interno del cerchio e lasciare solo il bordo visibile
   -webkit è per safari; mask per tutti gli altri browser */
   -webkit-mask: radial-gradient(
     farthest-side,
-    transparent calc(100% - 8px),
-    white calc(100% - 8px)
+    transparent calc(100% - 15px),
+    white calc(0% - 8px)
   );
   mask: radial-gradient(
     farthest-side,
-    transparent calc(100% - 8px),
-    white calc(100% - 8px)
+    transparent calc(100% - 15px),
+    white calc(0% - 8px)
   );
 }
 
@@ -260,7 +392,17 @@ li {
   color: white;
   font-weight: 400;
 }
-#answer {
+
+#blocco-in-basso {
+  position: relative;
+  width: 850px;
+  margin: 0 auto;
+  height: 300px;
+}
+#blocco-in-basso-2 {
+  position: absolute;
+  width: 850px;
+  bottom: 0;
 }
 /* ------------------------------ FEEDBACK */
 #main-feedback {
@@ -391,4 +533,9 @@ li {
   font-size: 16px;
   font-weight: bold;
   color: #00ffff;
+}
+/* --------------------- prova feedback */
+#feedback {
+  width: 850px;
+  margin-top: 15px;
 }

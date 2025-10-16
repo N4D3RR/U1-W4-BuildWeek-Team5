@@ -16,7 +16,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -128,6 +128,8 @@ for (let i = 0; i < questions.length; i++) {
 // FUNZIONE PER MOSTRARE BOTTONI RISPOSTE
 function mostraRisposte() {
   contenitoreRisposte.innerHTML = "" // Pulisci contenitore
+  document.getElementById("feedback").innerText = "" // Pulisci feedback
+
   for (let i = 0; i < tutteLeRisposte[count].length; i++) {
     let bottone = document.createElement("button")
     bottone.classList.add("bottone-risposte")
@@ -137,25 +139,41 @@ function mostraRisposte() {
         contenitoreRisposte.children[j].classList.remove("risposta-selezionata")
       }
       bottone.classList.add("risposta-selezionata")
+      bottone.classList.remove("no-hover")
       elencoRisposte[0] = bottone.innerText
+
       console.log(elencoRisposte)
     })
     contenitoreRisposte.appendChild(bottone)
   }
 }
-
+//VALUTA LE RISPOSTE ALLA FINE DEL TIMER
 const onTimerFinish = function () {
+  stopTimer()
+  if (elencoRisposte[0] === questions[count].correct_answer) {
+    document.getElementById("feedback").innerText = "Risposta corretta!"
+    document.getElementById("feedback").style.color = "green"
+  } else {
+    document.getElementById("feedback").innerText =
+      " Risposta sbagliata! " +
+      " La risposta giusta era: " +
+      questions[count].correct_answer
+    document.getElementById("feedback").style.color = "red"
+  }
   if (elencoRisposte[0] === questions[count].correct_answer) {
     aggiungiRisposta({ rispostaUtente: elencoRisposte[0], corretta: true })
   } else {
     aggiungiRisposta({ rispostaUtente: elencoRisposte[0], corretta: false })
   }
-  count++
-  for (let i = 0; i < domanda.length; i++) {
-    domanda[i].innerText = questions[count]?.question || ""
-  }
-  mostraRisposte()
-  startTimer(onTimerFinish)
+  setTimeout(() => {
+    count++
+    document.getElementById("counter").textContent = count + 1 //per aggiornare il numero domanda
+    for (let i = 0; i < domanda.length; i++) {
+      domanda[i].innerText = questions[count]?.question || ""
+    }
+    mostraRisposte()
+    startTimer(onTimerFinish)
+  }, 2000)
 }
 // MOSTRA PRIMA DOMANDA E RISPOSTE SUBITO
 for (let i = 0; i < domanda.length; i++) {
@@ -167,20 +185,36 @@ startTimer(onTimerFinish)
 // AL CLICK SU AVANTI
 avanti.addEventListener("click", function () {
   stopTimer()
+  // funzione feedback giusto/ sbagliato green/red
+  if (elencoRisposte[0] === questions[count].correct_answer) {
+    document.getElementById("feedback").innerText = "Risposta corretta!"
+    document.getElementById("feedback").style.color = "green"
+  } else {
+    document.getElementById("feedback").innerText =
+      "Risposta sbagliata! " +
+      " La risposta giusta era: " +
+      questions[count].correct_answer
+    document.getElementById("feedback").style.color = "red"
+  }
+
   if (elencoRisposte[0] === questions[count].correct_answer) {
     aggiungiRisposta({ rispostaUtente: elencoRisposte[0], corretta: true })
   } else {
     aggiungiRisposta({ rispostaUtente: elencoRisposte[0], corretta: false })
   }
-  count++
-  //all'ultima domanda, manda a results
-  if (count >= questions.length) {
-    window.location.href = "/prova-soluzione/results-g.html"
-  }
-  for (let i = 0; i < domanda.length; i++) {
-    domanda[i].innerText = questions[count]?.question || ""
-  }
-  mostraRisposte()
+  setTimeout(() => {
+    count++
+    document.getElementById("counter").textContent = count + 1 //aggiorna counter domande anche premendo tasto avanti
+    // aggiorna domanda nel DOM
+    //all'ultima domanda, manda a results
+    if (count >= questions.length) {
+      window.location.href = "/PROVA NAD/3results.html"
+    }
+    for (let i = 0; i < domanda.length; i++) {
+      domanda[i].innerText = questions[count]?.question || ""
+    }
+    mostraRisposte()
 
-  startTimer(onTimerFinish)
+    startTimer(onTimerFinish)
+  }, 2000)
 })
