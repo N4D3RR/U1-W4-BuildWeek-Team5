@@ -184,7 +184,9 @@ startTimer(onTimerFinish)
 
 // AL CLICK SU AVANTI
 avanti.addEventListener("click", function () {
+  avanti.disabled = true
   stopTimer()
+
   // funzione feedback giusto/ sbagliato green/red
   if (elencoRisposte[0] === questions[count].correct_answer) {
     document.getElementById("feedback").innerText = "Risposta corretta!"
@@ -216,5 +218,6 @@ avanti.addEventListener("click", function () {
     mostraRisposte()
 
     startTimer(onTimerFinish)
+    avanti.disabled = false
   }, 2000)
 })

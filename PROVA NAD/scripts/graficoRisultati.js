@@ -38,9 +38,9 @@ window.addEventListener("DOMContentLoaded", function () {
     `
   } else {
     centerText.innerHTML = `
-      <strong>Peccato!</strong><br>
-      Non hai superato il test.<br>
-      <small>Riprova quando ti senti pronto</small>
+      <strong>Too bad!</strong><br>
+      You didn't pass the test.<br>
+      <small>Try again when you feel ready!</small>
     `
   }
 
