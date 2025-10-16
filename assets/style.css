@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 body {
   background-image: url(img/bg.png);
   background-position: top;
   background-size: cover;
-  font-family: "Outfit", sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -33,6 +33,17 @@ header img {
   height: 70px;
   color: black;
   background-color: #00ffff;
+  border: none;
+  box-shadow: 0px 0px 35px 15px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bottone-fluorescente:hover {
+  width: 250px;
+  height: 70px;
+  color: white;
+  background-color: #004545;
   border: none;
   box-shadow: 0px 0px 35px 15px rgba(0, 255, 255, 0.4);
   font-size: 20px;
@@ -155,7 +166,7 @@ li {
   background-color: transparent;
 }
 #tasto:checked::after {
-  content: "✔";
+  content: '✔';
   position: absolute;
   top: -2px;
   left: 2px;
