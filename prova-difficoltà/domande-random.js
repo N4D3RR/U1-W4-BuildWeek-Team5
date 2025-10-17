@@ -7,7 +7,7 @@ function decodeHTML(text) {
   textarea.innerHTML = text
   return textarea.value
 }
-//crea l'url con i parametri numqeustions e difficulty e ritorna un array results con le domande
+//crea l'url con i parametri numquestions e difficulty e ritorna un array results con le domande
 async function fetchData() {
   const url = `https://opentdb.com/api.php?amount=${numQuestions}&category=18&difficulty=${difficulty}`
   try {
