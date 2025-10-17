@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 body {
   background-image: url(bg.png);
   background-position: top;
   background-size: cover;
-  font-family: "Outfit", sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -200,7 +200,7 @@ li {
   background-color: transparent;
 }
 #tasto:checked::after {
-  content: "✔";
+  content: '✔';
   position: absolute;
   top: -2px;
   left: 2px;
@@ -541,6 +541,7 @@ li {
 }
 /*------------------------config*/
 .config-container {
+  position: relative;
   width: 1024px;
   height: 768px;
 }
@@ -548,14 +549,29 @@ li {
 .difficulty-btn {
   width: 167px;
   height: 45px;
-  color: black;
-  background-color: #00ffff;
-  border: none;
-  box-shadow: 0px 0px 35px 15px rgba(0, 255, 255, 0.4);
-  font-size: 19px;
-  font-weight: 500;
-  margin: 0 20px;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
 }
+
+.difficulty-btn:hover {
+  width: 167px;
+  height: 45px;
+  color: white;
+  background: none;
+  border: 2px solid rgb(157, 1, 141);
+  border-radius: 10px;
+  box-shadow: 0px 0px 35px 15px rgba(157, 1, 141, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
 .istru li {
   list-style-type: none;
   font-size: 16px;
@@ -574,7 +590,7 @@ h1 {
   height: 60px;
   border-radius: 20px;
   padding-left: 30px;
-  padding-top: 4px;
+  margin-top: 30px;
 }
 
 #icona-testo {
@@ -583,10 +599,118 @@ h1 {
 #icona-testo p {
   margin: 0;
 }
-#aiuto,
-#aiuto2 {
-  display: inline-block;
+
+#contenitore-istruzioni {
+  padding-top: 80px;
 }
+
+.icx {
+  position: relative;
+  top: 2px;
+}
+
+#configura {
+  padding-top: 80px;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+#contenitore-configurazioni {
+  position: relative;
+  width: 1024px;
+}
+
+#contenitore-configurazioni h2 {
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.config-section1 {
+  position: absolute;
+  left: 0;
+}
+.config-section2 {
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+
+#bottone-ndomande {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#bottone-inizio {
+  padding: 0px;
+  box-shadow: none;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+#icona-inizio {
+  font-size: 40px;
+  border-radius: 100%;
+  color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.4);
+  background-color: #00ffff5b;
+}
+#icona-inizio:hover {
+  font-size: 40px;
+  border-radius: 100%;
+  color: rgb(157, 1, 141);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.4);
+  background-color: rgba(157, 1, 141, 0.316);
+  border: none;
+  box-shadow: 0px 0px 35px 15px rgba(157, 1, 141, 0.4);
+}
+
+.number-btn {
+  color: white;
+  background: none;
+  border: 2px solid white;
+  box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 0 6px;
+}
+
+#numQuestions {
+  color: white;
+  background: none;
+  border: 2px solid white;
+  box-shadow: 0px 0px 60px 3px rgba(0, 255, 255, 0.4);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10px;
+  width: 70px;
+  height: 38px;
+}
+
+#allineamento-warning {
+  padding: 17px 0;
+}
+
+#icona-testo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 #aiuto2 {
-  padding-bottom: 25px;
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
+
+#aiuto ion-icon {
+  vertical-align: middle;
 }

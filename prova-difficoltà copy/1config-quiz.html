@@ -14,7 +14,7 @@
         <img src="epicode_logo.png" alt="logo epicode" />
       </header>
       <main class="config-container">
-        <div>
+        <div id="contenitore-istruzioni">
           <h1>Istruzioni</h1>
           <p class="boh">
             Non ci si aspetta che i candidati sappiano rispondere
@@ -87,60 +87,67 @@
           </ul>
         </div>
         <div id="warning">
-          <div id="icona-testo">
-            <div id="aiuto">
-              <ion-icon
-                class="icx"
-                style="color: yellow; font-size: 20px"
-                name="warning-outline"
-              ></ion-icon>
+          <div id="allineamento-warning">
+            <div id="icona-testo">
+              <div id="aiuto">
+                <ion-icon
+                  class="icx"
+                  style="color: yellow; font-size: 20px"
+                  name="warning-outline"
+                ></ion-icon>
+              </div>
+              <div id="aiuto2">
+                <p>
+                  Avviso importante! Gli esami non possono essere sostenuti
+                  tramite dispositivi mobili
+                </p>
+              </div>
             </div>
-            <div id="aiuto2">
-              <p>
-                Avviso importante! Gli esami non possono essere sostenuti
-                tramite dispositivi mobili
-              </p>
+          </div>
+        </div>
+        <p id="configura">Configura il tuo Quiz</p>
+        <div id="contenitore-configurazioni">
+          <div class="config-section1">
+            <h2>Seleziona la difficoltà:</h2>
+            <div class="difficulty-buttons">
+              <button class="difficulty-btn" data-difficulty="easy">
+                FACILE
+              </button>
+              <button class="difficulty-btn" data-difficulty="medium">
+                MEDIO
+              </button>
+              <button class="difficulty-btn" data-difficulty="hard">
+                DIFFICILE
+              </button>
+            </div>
+          </div>
+
+          <div class="config-section2">
+            <h2>Numero di domande:</h2>
+            <div class="number-input-container">
+              <button class="number-btn" onclick="changeNumber(-1)">-</button>
+              <input
+                type="number"
+                class="number-input"
+                id="numQuestions"
+                min="5"
+                max="15"
+                value="10"
+              />
+              <button class="number-btn" onclick="changeNumber(1)">+</button>
+              <div id="error-message" class="error-message"></div>
             </div>
           </div>
         </div>
-        <p>Configura il tuo Quiz</p>
-
-        <div class="config-section">
-          <h2>Seleziona la difficoltà:</h2>
-          <div class="difficulty-buttons">
-            <button class="difficulty-btn" data-difficulty="easy">
-              FACILE
-            </button>
-            <button class="difficulty-btn" data-difficulty="medium">
-              MEDIO
-            </button>
-            <button class="difficulty-btn" data-difficulty="hard">
-              DIFFICILE
-            </button>
-          </div>
+        <div id="bottone-ndomande">
+          <button
+            class="start-quiz-btn bottone-fluorescente"
+            id="bottone-inizio"
+            disabled
+          >
+            <ion-icon id="icona-inizio" name="arrow-forward-circle"></ion-icon>
+          </button>
         </div>
-
-        <div class="config-section">
-          <h2>Numero di domande:</h2>
-          <div class="number-input-container">
-            <button class="number-btn" onclick="changeNumber(-1)">-</button>
-            <input
-              type="number"
-              class="number-input"
-              id="numQuestions"
-              min="5"
-              max="15"
-              value="10"
-            />
-            <button class="number-btn" onclick="changeNumber(1)">+</button>
-          </div>
-          <p><small>Scegli tra 5 e 10 domande</small></p>
-          <div id="error-message" class="error-message"></div>
-        </div>
-
-        <button class="start-quiz-btn" id="startBtn" disabled>
-          Inizia Quiz
-        </button>
       </main>
     </div>
     <script
