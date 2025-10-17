@@ -574,10 +574,13 @@ li {
 
 .istru li {
   list-style-type: none;
-  font-size: 16px;
+  font-size: 20px;
+  position: relative;
+  width: 730px;
+  height: 20px;
 }
 .boh {
-  font-size: 20px;
+  font-size: 23px;
 }
 .istru {
   padding: 0 0 0 25px;
@@ -587,10 +590,12 @@ h1 {
 }
 #warning {
   background-color: rgba(255, 255, 255, 0.381);
-  height: 60px;
-  border-radius: 20px;
+  height: 40px;
+  border-radius: 15px;
   padding-left: 30px;
+  padding-right: 30px;
   margin-top: 30px;
+  width: 615px;
 }
 
 #icona-testo {
@@ -697,7 +702,7 @@ h1 {
 }
 
 #allineamento-warning {
-  padding: 17px 0;
+  padding: 7px 0;
 }
 
 #icona-testo {
@@ -712,5 +717,30 @@ h1 {
 }
 
 #aiuto ion-icon {
+  vertical-align: middle;
+}
+
+.pallini {
+  position: absolute;
+  left: 0;
+}
+
+.testi-li {
+  width: 700px;
+  position: absolute;
+  right: 0;
+}
+
+#li-lungo {
+  height: 40px;
+}
+
+.pallino-allineato {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.allinea-verticale {
   vertical-align: middle;
 }
