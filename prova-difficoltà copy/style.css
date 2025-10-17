@@ -583,10 +583,30 @@ h1 {
 #icona-testo p {
   margin: 0;
 }
-#aiuto,
-#aiuto2 {
-  display: inline-block;
-}
+
 #aiuto2 {
   padding-bottom: 25px;
+}
+
+#icona-testo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#aiuto2 {
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
+
+#aiuto ion-icon {
+  vertical-align: middle;
+}
+.prete {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.punttt {
+  vertical-align: middle;
 }
