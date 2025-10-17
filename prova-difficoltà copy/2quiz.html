@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/reset.css" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/basestyle.css" />
+    <link rel="stylesheet" href="/PROVA NAD/assets/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Quiz</title>
+  </head>
+  <body>
+    <!-- logo e timer -->
+    <div id="contenitore-generale-quiz">
+      <header id="header-quiz">
+        <img
+          class="logo-quiz"
+          src="/PROVA NAD/assets/img/epicode_logo.png"
+          alt="logo epicode"
+        />
+        <!-- timer -->
+        <div id="tempo">
+          <div class="timer">
+            <div id="progress-circle"></div>
+            <div class="timer-text">
+              <p>
+                <small
+                  >SECONDS<br /><span id="seconds">30</span
+                  ><br />REMAINING</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="main-quiz">
+        <!-- domanda e risposte -->
+        <div id="contenitore-domanda-main">
+          <div class="domanda">
+            <p class="domanda-corrente"></p>
+          </div>
+          <div id="contenitore-risposte-main">
+            <div id="blocco-in-basso">
+              <div id="blocco-in-basso-2">
+                <div id="contenitore-risposte">
+                  <div id="answers"></div>
+                  <div id="feedback"></div>
+                </div>
+                <!--feedback immediato della risposta  -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="contenitoredim">
+          <div id="dom-ris">
+            <div id="counter-questions">
+              <p id="questo">
+                QUESTION
+                <span id="counter">1</span>
+                <span id="total-counter"></span>
+              </p>
+            </div>
+            <button class="bottone-fluorescente" id="bottone-avanti">
+              <ion-icon id="iconagiada" name="arrow-forward-circle"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </main>
+      <!-- counter domande -->
+    </div>
+    <script src="/PROVA NAD/scripts/timer.js"></script>
+    <script src="domande-random.js"></script>
+  </body>
+</html>
