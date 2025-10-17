@@ -539,3 +539,30 @@ li {
   width: 850px;
   margin-top: 15px;
 }
+/* _________________________________________________________________________________________________________________________________________________________________ */
+#livello-container {
+  font-size: 1.3em;
+  display: flex;
+  justify-content: end;
+}
+
+#livello-difficolta {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+#livello-difficolta option {
+  background-color: #121212;
+  color: white;
+}
+
+#livello-difficolta:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
