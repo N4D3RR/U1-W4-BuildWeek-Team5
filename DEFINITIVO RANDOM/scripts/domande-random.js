@@ -114,9 +114,13 @@ async function eseguiTutto(arr) {
       count++
       document.getElementById("counter").innerText = count + 1 //per aggiornare il numero domanda
       document.getElementById("total-counter").innerText = `/${arr.length}`
+      if (count >= arr.length) {
+        window.location.href = "4.results.html"
+      }
       for (let i = 0; i < domanda.length; i++) {
         domanda[i].innerText = decodeHTML(arr[count].question) || ""
       }
+
       mostraRisposte()
       startTimer(onTimerFinish)
     }, 2000)
@@ -159,7 +163,7 @@ async function eseguiTutto(arr) {
       // aggiorna domanda nel DOM
       //all'ultima domanda, manda a results
       if (count >= arr.length) {
-        window.location.href = "/PROVA NAD/3results.html"
+        window.location.href = "4.results.html"
       }
       for (let i = 0; i < domanda.length; i++) {
         domanda[i].innerText = decodeHTML(arr[count].question) || ""

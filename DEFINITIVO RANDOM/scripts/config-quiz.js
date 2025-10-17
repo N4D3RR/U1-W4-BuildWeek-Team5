@@ -5,7 +5,7 @@ let selectedQuestions = 10
 // Elementi DOM
 const difficultyButtons = document.querySelectorAll(".difficulty-btn")
 const numberInput = document.getElementById("numQuestions")
-const startBtn = document.getElementById("startBtn")
+const startBtn = document.getElementById("bottone-inizio")
 const errorMessage = document.getElementById("error-message")
 
 // Gestione selezione difficoltà
@@ -71,7 +71,7 @@ startBtn.addEventListener("click", function () {
     localStorage.setItem("quizNumQuestions", selectedQuestions.toString())
 
     // Vai alla pagina del quiz
-    window.location.href = "2quiz.html"
+    window.location.href = "3.quiz.html"
   }
 })
 

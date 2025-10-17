@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/PROVA NAD/assets/reset.css" />
-    <link rel="stylesheet" href="/PROVA NAD/assets/basestyle.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/DEFINITIVO RANDOM/assets/reset.css" />
+    <link rel="stylesheet" href="/DEFINITIVO RANDOM/assets/basestyle.css" />
+    <link rel="stylesheet" href="/DEFINITIVO RANDOM/assets/style.css" />
     <title>Configura Quiz</title>
   </head>
   <body>
     <div id="contenitore-generale">
       <header>
-        <img src="epicode_logo.png" alt="logo epicode" />
+        <img
+          src="/DEFINITIVO RANDOM/assets/img/epicode_logo.png"
+          alt="logo epicode"
+        />
       </header>
       <main class="config-container">
         <div id="contenitore-istruzioni">
-          <h1>Istruzioni</h1>
-          <p class="boh">
-            Non ci si aspetta che i candidati sappiano rispondere
-          </p>
+          <h1>Instructions</h1>
+          <p class="boh">Candidates are not expected to know the answers.</p>
           <ul class="istru">
             <li class="pallino-allineato">
               <div class="pallini">
@@ -44,7 +45,7 @@
                 </span>
               </div>
               <div class="testi-li">
-                I risultati del quiz non fanno parte del voto
+                Quiz results do not count towards your grade.
               </div>
             </li>
             <li class="pallino-allineato">
@@ -70,14 +71,16 @@
                   </svg>
                 </span>
               </div>
-              <div class="testi-li">Puoi fare il quiz quante volte vuoi</div>
+              <div class="testi-li">
+                You can take the quiz as many times as you want.
+              </div>
             </li>
             <li id="li-lungo">
               <div class="pallini">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
-                  height="16"
+                  height="20"
                   viewBox="0 0 16 16"
                   aria-hidden="true"
                   role="img"
@@ -94,8 +97,8 @@
                 </svg>
               </div>
               <div class="testi-li">
-                Il quiz ti offre l'opportunità di testare le tue conoscenze e di
-                esercitarti nel formato dell'esame senza alcuna pressione
+                To proceed you must select the difficulty and the number of
+                questions.
               </div>
             </li>
           </ul>
@@ -112,32 +115,31 @@
               </div>
               <div id="aiuto2">
                 <p>
-                  Avviso importante! Gli esami non possono essere sostenuti
-                  tramite dispositivi mobili
+                  Important notice! Exams cannot be taken on mobile devices.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <p id="configura">Configura il tuo Quiz</p>
+        <p id="configura">Set up your Quiz</p>
         <div id="contenitore-configurazioni">
           <div class="config-section1">
-            <h2>Seleziona la difficoltà:</h2>
+            <h2>Select difficulty:</h2>
             <div class="difficulty-buttons">
               <button class="difficulty-btn" data-difficulty="easy">
-                FACILE
+                EASY
               </button>
               <button class="difficulty-btn" data-difficulty="medium">
-                MEDIO
+                MEDIUM
               </button>
               <button class="difficulty-btn" data-difficulty="hard">
-                DIFFICILE
+                HARD
               </button>
             </div>
           </div>
 
           <div class="config-section2">
-            <h2>Numero di domande:</h2>
+            <h2>Number of questions:</h2>
             <div class="number-input-container">
               <button class="number-btn" onclick="changeNumber(-1)">-</button>
               <input
@@ -168,6 +170,6 @@
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script src="config-quiz.js"></script>
+    <script src="/DEFINITIVO RANDOM/scripts/config-quiz.js"></script>
   </body>
 </html>
